@@ -2,4 +2,4 @@
 
 Fast and flexible Deep Learning platform written in C++
 
-The platfor
+The platform is under **intensive** developm
