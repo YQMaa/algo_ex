@@ -69,3 +69,50 @@ C := $(CC) $(CCFLAGS) $(CCFLAGS_BLAS) $(CCFLAGS_GUI)
 GITIGNORE=.gitignore
 
 # sources and objects folders
+SRC_DIR=src
+BUILD_DIR=build
+
+# source files
+MAIN_SRC=$(patsubst $(SRC_DIR)/test_cblas.cc,,$(wildcard $(SRC_DIR)/*.cc))
+AUX_SRC=$(shell find $(SRC_DIR)/*/ -name *.cc 2> /dev/null)
+HEADERS=$(shell find $(SRC_DIR)/*/ -name *.h 2> /dev/null)
+SRC=$(MAIN_SRC) $(AUX_SRC)
+
+# object files
+OBJS=$(patsubst %.cc,%.o,$(patsubst $(SRC_DIR)/%,$(BUILD_DIR)/%,$(SRC)))
+AUX_OBJS=$(patsubst %.cc,%.o,$(patsubst $(SRC_DIR)/%,$(BUILD_DIR)/%,$(AUX_SRC)))
+
+# binaries
+EXEC=$(patsubst $(SRC_DIR)/%,%,$(patsubst %.cc,%,$(MAIN_SRC)))
+
+.PHONY: build debug clean run cblas atlas gtkmm
+
+MODIFIERS=cblas atlas
+REAL_GOALS=$(strip $(filter-out $(MODIFIERS),$(MAKECMDGOALS)))
+
+build: $(EXEC)
+
+debug: $(EXEC)
+
+ifeq "$(REAL_GOALS)" ""
+atlas: build
+	@echo "Compiled with ATLAS"
+cblas: build
+	@echo "Compiled with BLAS"
+else
+atlas:
+	@echo "Using ATLAS"
+cblas:
+	@echo "Using BLAS"
+endif
+
+# Link object files
+#  Add the following line to add executable to .gitignore.
+
+test_cblas: $(SRC_DIR)/test_cblas.cc
+	$(C) -o $@ $+ $(LIB)
+	(cat $(GITIGNORE) | grep -xq $@) || echo "$@" >> $(GITIGNORE)
+
+$(EXEC): %: $(BUILD_DIR)/%.o $(AUX_OBJS)
+	(cat $(GITIGNORE) | grep -xq $@) || echo "$@" >> $(GITIGNORE)
+	$(C) -o $@ $+ $(LIB)
