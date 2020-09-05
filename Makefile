@@ -116,3 +116,19 @@ test_cblas: $(SRC_DIR)/test_cblas.cc
 $(EXEC): %: $(BUILD_DIR)/%.o $(AUX_OBJS)
 	(cat $(GITIGNORE) | grep -xq $@) || echo "$@" >> $(GITIGNORE)
 	$(C) -o $@ $+ $(LIB)
+
+# Build object files from sources
+$(OBJS): $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cc $(HEADERS)
+	mkdir -p $(patsubst %/$(lastword $(subst /, ,$@)),%,$@)
+	$(C) -I$(SRC_DIR) -c $(word 1,$+) -o $@
+
+# Remove all Emacs temporary files, objects and executable
+clean:
+	rm -rf test_cblas $(EXEC) $(BUILD_DIR)/*
+	find . -name '*~' -print0 | xargs -0 rm -f
+	find . -name '*.swp' -print0 | xargs -0 rm -f
+	find . -name '*.swp' -print0 | xargs -0 rm -f
+
+# Run one executable
+run: build
+	./$(lastword $(EXEC))
