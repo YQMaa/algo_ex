@@ -7,4 +7,5 @@ Thursday, 23rd of April. Stay tuned!
 
 ## Using BLAS
 
-Cerebrum can use BLAS to speed up computatio
+Cerebrum can use BLAS to speed up computation. BLAS is not a mandatory
+dependency, but we re
