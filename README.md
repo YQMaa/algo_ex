@@ -10,4 +10,5 @@ Thursday, 23rd of April. Stay tuned!
 Cerebrum can use BLAS to speed up computation. BLAS is not a mandatory
 dependency, but we recommend you to use it.
 
-You can use any C
+You can use any CBLAS implementation, (e.g.
+ [ATLAS
