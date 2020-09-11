@@ -12,4 +12,4 @@ dependency, but we recommend you to use it.
 
 You can use any CBLAS implementation, (e.g.
  [ATLAS](http://math-atlas.sourceforge.net/),
- [OpenBLAS](
+ [OpenBLAS](www.openblas.net)), but you have to let the comp
