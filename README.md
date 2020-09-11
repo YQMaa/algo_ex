@@ -11,4 +11,5 @@ Cerebrum can use BLAS to speed up computation. BLAS is not a mandatory
 dependency, but we recommend you to use it.
 
 You can use any CBLAS implementation, (e.g.
- [ATLAS
+ [ATLAS](http://math-atlas.sourceforge.net/),
+ [OpenBLAS](
