@@ -13,4 +13,6 @@ dependency, but we recommend you to use it.
 You can use any CBLAS implementation, (e.g.
  [ATLAS](http://math-atlas.sourceforge.net/),
  [OpenBLAS](www.openblas.net)), but you have to let the compiler know about
-the specific flags and the l
+the specific flags and the location of the libraries to be linked.
+
+##
