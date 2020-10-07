@@ -15,4 +15,6 @@ You can use any CBLAS implementation, (e.g.
  [OpenBLAS](www.openblas.net)), but you have to let the compiler know about
 the specific flags and the location of the libraries to be linked.
 
-##
+### Compiling with BLAS
+
+You have two optio
