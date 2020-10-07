@@ -17,4 +17,7 @@ the specific flags and the location of the libraries to be linked.
 
 ### Compiling with BLAS
 
-You have two options to send the compiler the flags needed in ord
+You have two options to send the compiler the flags needed in order to use
+BLAS.
+
+#### Using confi
