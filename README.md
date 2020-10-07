@@ -20,4 +20,6 @@ the specific flags and the location of the libraries to be linked.
 You have two options to send the compiler the flags needed in order to use
 BLAS.
 
-#### Using confi
+#### Using configuration files
+
+1.  Create a file named `cbla
