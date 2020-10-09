@@ -22,4 +22,5 @@ BLAS.
 
 #### Using configuration files
 
-1.  Create a file named `cblas.cflags` with the needed pre-processor, an
+1.  Create a file named `cblas.cflags` with the needed pre-processor, and
+    compiler flags. For example, `cblas.c` m
