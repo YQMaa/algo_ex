@@ -22,4 +22,4 @@ BLAS.
 
 #### Using configuration files
 
-1.  Create a file named `cbla
+1.  Create a file named `cblas.cflags` with the needed pre-processor, an
