@@ -23,4 +23,7 @@ BLAS.
 #### Using configuration files
 
 1.  Create a file named `cblas.cflags` with the needed pre-processor, and
-    compiler flags. For example, `cblas.c` m
+    compiler flags. For example, `cblas.c` might contain the following line:
+    
+    ```
+    -I/usr/includ
