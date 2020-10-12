@@ -26,4 +26,7 @@ BLAS.
     compiler flags. For example, `cblas.c` might contain the following line:
     
     ```
-    -I/usr/includ
+    -I/usr/include/openblas/
+    ```
+
+2.  Create a file named `
