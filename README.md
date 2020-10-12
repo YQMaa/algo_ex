@@ -29,4 +29,5 @@ BLAS.
     -I/usr/include/openblas/
     ```
 
-2.  Create a file named `
+2.  Create a file named `cblas.libs` with the needed linker flags. For example,
+  
