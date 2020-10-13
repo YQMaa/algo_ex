@@ -30,4 +30,7 @@ BLAS.
     ```
 
 2.  Create a file named `cblas.libs` with the needed linker flags. For example,
-    `cblas.libs` might have the following contents
+    `cblas.libs` might have the following contents:
+    
+    ```
+    -L/usr/lib64/ -lopenblas -lpthread -lg
