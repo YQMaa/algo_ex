@@ -33,4 +33,7 @@ BLAS.
     `cblas.libs` might have the following contents:
     
     ```
-    -L/usr/lib64/ -lopenblas -lpthread -lg
+    -L/usr/lib64/ -lopenblas -lpthread -lgfortran
+    ```
+
+3.  Add `cblas` to the goals you send t
