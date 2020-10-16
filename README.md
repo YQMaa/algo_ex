@@ -36,4 +36,7 @@ BLAS.
     -L/usr/lib64/ -lopenblas -lpthread -lgfortran
     ```
 
-3.  Add `cblas` to the goals you send t
+3.  Add `cblas` to the goals you send to `make`:
+    
+    ```
+    $ make cbl
