@@ -39,4 +39,9 @@ BLAS.
 3.  Add `cblas` to the goals you send to `make`:
     
     ```
-    $ make cbl
+    $ make cblas test_cblas
+    $ ./test_cblas
+    ok
+    ```
+
+###### Speci
