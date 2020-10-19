@@ -46,4 +46,4 @@ BLAS.
 
 ###### Specify the BLAS implementation
 
-1.  Make sure that `p
+1.  Make sure that `pkg-config` provides the needed pre-proc
