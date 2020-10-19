@@ -44,4 +44,6 @@ BLAS.
     ok
     ```
 
-###### Speci
+###### Specify the BLAS implementation
+
+1.  Make sure that `p
