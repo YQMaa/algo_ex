@@ -50,4 +50,5 @@ BLAS.
     and linker flags. For example:
     
     ```
-    $ pkg-config atlas --cflags --l
+    $ pkg-config atlas --cflags --libs
+    -I/usr/include/atlas/ -L/usr/lib64/
