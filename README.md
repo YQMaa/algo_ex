@@ -51,4 +51,7 @@ BLAS.
     
     ```
     $ pkg-config atlas --cflags --libs
-    -I/usr/include/atlas/ -L/usr/lib64/
+    -I/usr/include/atlas/ -L/usr/lib64/atlas/ -lsatlas
+    ```
+
+2. Send the packag
