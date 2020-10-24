@@ -47,4 +47,7 @@ BLAS.
 ###### Specify the BLAS implementation
 
 1.  Make sure that `pkg-config` provides the needed pre-processor, compiler,
-    and linker flags. For 
+    and linker flags. For example:
+    
+    ```
+    $ pkg-config atlas --cflags --l
