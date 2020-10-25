@@ -54,4 +54,6 @@ BLAS.
     -I/usr/include/atlas/ -L/usr/lib64/atlas/ -lsatlas
     ```
 
-2. Send the packag
+2. Send the package name as a goal to the `make` command:
+    
+ 
