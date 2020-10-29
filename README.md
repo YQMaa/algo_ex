@@ -64,4 +64,4 @@ BLAS.
 
 ### Check that BLAS works
 
-1.  Compil
+1.  Compile `test_cblas` using one of the alternatives descri
