@@ -56,4 +56,6 @@ BLAS.
 
 2. Send the package name as a goal to the `make` command:
     
- 
+    ```
+    $ make atlas test_cblas
+    $ ./test_cblas
