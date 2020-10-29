@@ -59,3 +59,9 @@ BLAS.
     ```
     $ make atlas test_cblas
     $ ./test_cblas
+    ok
+    ```
+
+### Check that BLAS works
+
+1.  Compil
