@@ -72,4 +72,9 @@ BLAS.
     or
     ```
     $ make atlas test_cblas
-   
+    ```
+
+2.  Run the program:
+    
+    ```
+    $ ./te
