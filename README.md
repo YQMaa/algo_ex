@@ -64,4 +64,7 @@ BLAS.
 
 ### Check that BLAS works
 
-1.  Compile `test_cblas` using one of the alternatives descri
+1.  Compile `test_cblas` using one of the alternatives described above:
+    
+    ```
+    $ make cblas test_c
