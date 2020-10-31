@@ -77,4 +77,7 @@ BLAS.
 2.  Run the program:
     
     ```
-    $ ./te
+    $ ./test_cblas
+    ok
+    ```
+
