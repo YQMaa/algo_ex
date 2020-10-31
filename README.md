@@ -67,4 +67,9 @@ BLAS.
 1.  Compile `test_cblas` using one of the alternatives described above:
     
     ```
-    $ make cblas test_c
+    $ make cblas test_cblas
+    ```
+    or
+    ```
+    $ make atlas test_cblas
+   
