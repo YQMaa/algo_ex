@@ -6,3 +6,6 @@
 #include <cstddef>
 
 template<typename T, size_t height, size_t width, T... values>
+struct MetaMatrix { };
+
+templa
