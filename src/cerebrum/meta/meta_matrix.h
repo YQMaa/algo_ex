@@ -9,3 +9,4 @@ template<typename T, size_t height, size_t width, T... values>
 struct MetaMatrix { };
 
 template<typename T, size_t height, size_t width>
+struct MetaMatrix<T, height, width> {
