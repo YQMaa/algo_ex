@@ -13,4 +13,5 @@ struct MetaMatrix<T, height, width> {
   static constexpr size_t left = 0ul;
 };
 
-template<typename T, size_t _height, size_t _width, 
+template<typename T, size_t _height, size_t _width, T head, T... tail>
+struct MetaMatrix<T, _height, 
