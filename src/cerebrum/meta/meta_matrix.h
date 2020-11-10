@@ -14,4 +14,5 @@ struct MetaMatrix<T, height, width> {
 };
 
 template<typename T, size_t _height, size_t _width, T head, T... tail>
-struct MetaMatrix<T, _height, 
+struct MetaMatrix<T, _height, _width, head, tail...> {
+  using Type = T;
