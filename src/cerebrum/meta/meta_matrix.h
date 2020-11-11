@@ -16,4 +16,5 @@ struct MetaMatrix<T, height, width> {
 template<typename T, size_t _height, size_t _width, T head, T... tail>
 struct MetaMatrix<T, _height, _width, head, tail...> {
   using Type = T;
-  using Rest = MetaMatrix<T, _height, _
+  using Rest = MetaMatrix<T, _height, _width, tail...>;
+  static constexpr T first = 
