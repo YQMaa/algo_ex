@@ -18,4 +18,6 @@ struct MetaMatrix<T, _height, _width, head, tail...> {
   using Type = T;
   using Rest = MetaMatrix<T, _height, _width, tail...>;
   static constexpr T first = head;
-  static constexpr size_t height = _heigh
+  static constexpr size_t height = _height;
+  static constexpr size_t width = _width;
+  
