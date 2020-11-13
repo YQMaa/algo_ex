@@ -20,4 +20,7 @@ struct MetaMatrix<T, _height, _width, head, tail...> {
   static constexpr T first = head;
   static constexpr size_t height = _height;
   static constexpr size_t width = _width;
-  static constexpr size_t left = 1ul + Rest:
+  static constexpr size_t left = 1ul + Rest::left;
+};
+
+#endif
