@@ -8,4 +8,6 @@
 
 using namespace std;
 
-te
+template<typename T>
+struct SoftMax {
+  stati
