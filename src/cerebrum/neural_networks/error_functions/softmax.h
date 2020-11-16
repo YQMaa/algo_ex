@@ -3,4 +3,9 @@
 #ifndef SOFTMAX_H
 #define SOFTMAX_H
 
-#in
+#include <cmath>
+#include <array>
+
+using namespace std;
+
+te
