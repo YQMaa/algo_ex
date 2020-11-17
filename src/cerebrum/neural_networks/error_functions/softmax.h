@@ -10,4 +10,4 @@ using namespace std;
 
 template<typename T>
 struct SoftMax {
-  stati
+  static constexpr bool transforms_last_layer = true;
