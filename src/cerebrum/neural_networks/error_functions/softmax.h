@@ -11,4 +11,6 @@ using namespace std;
 template<typename T>
 struct SoftMax {
   static constexpr bool transforms_last_layer = true;
-  static constexpr bool supports_backpro
+  static constexpr bool supports_backpropagation = true;
+
+  template<typename LayerSize>
