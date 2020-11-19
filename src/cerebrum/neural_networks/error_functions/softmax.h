@@ -14,3 +14,6 @@ struct SoftMax {
   static constexpr bool supports_backpropagation = true;
 
   template<typename LayerSize>
+  using Output = array<T, LayerSize::length>;
+
+ 
