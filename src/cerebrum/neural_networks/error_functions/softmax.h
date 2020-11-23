@@ -17,4 +17,7 @@ struct SoftMax {
   using Output = array<T, LayerSize::length>;
 
   template<typename LayerSize, size_t batch_size>
-  using Outputs = array<Output<LayerSize>, batch_s
+  using Outputs = array<Output<LayerSize>, batch_size>;
+
+  template<typename LayerSize, size_t batch_size>
+  i
