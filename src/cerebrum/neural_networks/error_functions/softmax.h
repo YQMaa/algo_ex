@@ -23,4 +23,6 @@ struct SoftMax {
   inline static void
   f(const Outputs<LayerSize, batch_size>& a,
     Outputs<LayerSize, batch_size>& y) {
-    for (size_t n = 0; n < 
+    for (size_t n = 0; n < batch_size; n++) {
+      T sum = 0;
+      
