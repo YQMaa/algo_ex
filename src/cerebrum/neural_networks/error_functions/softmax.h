@@ -25,4 +25,5 @@ struct SoftMax {
     Outputs<LayerSize, batch_size>& y) {
     for (size_t n = 0; n < batch_size; n++) {
       T sum = 0;
-      
+      Output<LayerSize>* const y_row =
+        
