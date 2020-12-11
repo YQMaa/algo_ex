@@ -31,4 +31,5 @@ struct SoftMax {
         (*y_row)[i] = exp(a[n][i]);
         sum += (*y_row)[i];
       }
-      for (size_t i = 0; i < LayerSize::len
+      for (size_t i = 0; i < LayerSize::length; i++) {
+        (*y_row)[i] = (*y_row)[i] /
