@@ -32,4 +32,9 @@ struct SoftMax {
         sum += (*y_row)[i];
       }
       for (size_t i = 0; i < LayerSize::length; i++) {
-        (*y_row)[i] = (*y_row)[i] /
+        (*y_row)[i] = (*y_row)[i] / sum;
+      }
+    }
+  }
+
+  template<typename LayerSize, size_t
