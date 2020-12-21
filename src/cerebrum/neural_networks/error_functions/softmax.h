@@ -41,4 +41,5 @@ struct SoftMax {
   inline static T
   error(const Outputs<LayerSize, batch_size>& y,
         const Outputs<LayerSize, batch_size>& t) {
- 
+    T err = 0;
+    for (size_t n = 0; n < 
