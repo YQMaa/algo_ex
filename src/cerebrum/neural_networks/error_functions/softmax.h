@@ -51,4 +51,6 @@ struct SoftMax {
         err += (*t_row)[i] * log((*y_row)[i]);
     }
     return err;
-  
+  }
+
+  template<typename LayerSize, size_t bat
