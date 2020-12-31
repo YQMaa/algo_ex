@@ -53,4 +53,6 @@ struct SoftMax {
     return err;
   }
 
-  template<typename LayerSize, size_t bat
+  template<typename LayerSize, size_t batch_size>
+  inline static void
+  dError(co
