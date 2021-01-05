@@ -56,4 +56,5 @@ struct SoftMax {
   template<typename LayerSize, size_t batch_size>
   inline static void
   dError(const Outputs<LayerSize, batch_size>& y,
- 
+         const Outputs<LayerSize, batch_size>& t,
+       
