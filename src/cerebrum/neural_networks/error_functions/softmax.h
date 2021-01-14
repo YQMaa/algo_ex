@@ -65,3 +65,4 @@ struct SoftMax {
         reinterpret_cast<const Output<LayerSize>*>(t[n].data());
       Output<LayerSize>* const e_row =
         reinterpret_cast<Output<LayerSize>*>(e[n].data());
+      for (size_t i = 0; i < LayerSize::length; i++
