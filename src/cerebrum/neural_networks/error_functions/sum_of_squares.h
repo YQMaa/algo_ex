@@ -4,4 +4,7 @@
 #define SUM_OF_SQUARES_H
 
 #include <cmath>
-#include <array
+#include <array>
+
+template<typename T>
+struct SumOfSquares 
