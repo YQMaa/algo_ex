@@ -7,4 +7,5 @@
 #include <array>
 
 template<typename T>
-struct SumOfSquares 
+struct SumOfSquares {
+  static constexpr bool transforms_last_layer = fal
