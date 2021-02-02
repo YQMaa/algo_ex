@@ -11,4 +11,5 @@ struct SumOfSquares {
   static constexpr bool transforms_last_layer = false;
   static constexpr bool supports_backpropagation = true;
 
-  template<typenam
+  template<typename LayerSize>
+  using Output = std::array<T, LayerSi
