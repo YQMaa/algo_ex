@@ -8,4 +8,5 @@
 
 template<typename T>
 struct SumOfSquares {
-  static constexpr bool transforms_last_layer = fal
+  static constexpr bool transforms_last_layer = false;
+  static constexpr bool supports_backpropag
