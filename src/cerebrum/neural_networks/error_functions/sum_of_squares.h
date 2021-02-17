@@ -15,4 +15,6 @@ struct SumOfSquares {
   using Output = std::array<T, LayerSize::length>;
 
   template<typename LayerSize, size_t batch_size>
-  using Outputs = std::array<Output<
+  using Outputs = std::array<Output<LayerSize>, batch_size>;
+
+  template<typename LayerSize, 
