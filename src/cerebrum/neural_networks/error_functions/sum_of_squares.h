@@ -23,4 +23,4 @@ struct SumOfSquares {
         const Outputs<LayerSize, batch_size>& t) {
     T err = 0;
     for (size_t n = 0; n < batch_size; n++)
-   
+      for (size_t i = 0; i < LayerSize::length; i++
