@@ -24,4 +24,5 @@ struct SumOfSquares {
     T err = 0;
     for (size_t n = 0; n < batch_size; n++)
       for (size_t i = 0; i < LayerSize::length; i++)
-        err += (t[n][i] - y[n][i]) *
+        err += (t[n][i] - y[n][i]) * (t[n][i] - y[n][i]);
+    return err / (T)2
