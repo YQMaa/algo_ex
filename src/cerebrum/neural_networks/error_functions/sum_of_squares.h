@@ -28,4 +28,6 @@ struct SumOfSquares {
     return err / (T)2;
   }
 
-  template<typename LayerSize, size_t batch_s
+  template<typename LayerSize, size_t batch_size>
+  inline static void
+  dError(c
