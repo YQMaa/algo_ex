@@ -30,4 +30,4 @@ struct SumOfSquares {
 
   template<typename LayerSize, size_t batch_size>
   inline static void
-  dError(c
+  dError(const Outputs<LayerSize, batch_size>& y,
