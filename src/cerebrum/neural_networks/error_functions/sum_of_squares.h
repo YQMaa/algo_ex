@@ -32,4 +32,5 @@ struct SumOfSquares {
   inline static void
   dError(const Outputs<LayerSize, batch_size>& y,
          const Outputs<LayerSize, batch_size>& t,
-         Outputs<LayerSize, batch_siz
+         Outputs<LayerSize, batch_size>& e) {
+    for (size_t n = 0; n < batch_size
