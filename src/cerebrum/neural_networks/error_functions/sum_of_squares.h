@@ -34,4 +34,5 @@ struct SumOfSquares {
          const Outputs<LayerSize, batch_size>& t,
          Outputs<LayerSize, batch_size>& e) {
     for (size_t n = 0; n < batch_size; n++) {
-      const Output<LayerSi
+      const Output<LayerSize>* const y_row =
+        reinterpret_cast
