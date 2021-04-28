@@ -5,4 +5,7 @@
 
 #include "cerebrum/neural_networks/parameters.h"
 #include "cerebrum/neural_networks/forward_computation.h"
-#include "cerebrum/neural_networks/gradient_c
+#include "cerebrum/neural_networks/gradient_computation.h"
+
+template<typename... info>
+struct 
