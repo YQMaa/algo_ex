@@ -4,4 +4,5 @@
 #define FEED_FORWARD_NET_H
 
 #include "cerebrum/neural_networks/parameters.h"
-#include "cerebrum/neural_networks/forward_compu
+#include "cerebrum/neural_networks/forward_computation.h"
+#include "cerebrum/neural_networks/gradient_c
