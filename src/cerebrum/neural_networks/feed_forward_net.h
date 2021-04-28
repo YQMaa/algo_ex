@@ -3,4 +3,4 @@
 #ifndef FEED_FORWARD_NET_H
 #define FEED_FORWARD_NET_H
 
-#include "cerebr
+#include "cerebrum/neural_networks/parameters.h"
