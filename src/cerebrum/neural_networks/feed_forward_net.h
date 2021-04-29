@@ -8,4 +8,6 @@
 #include "cerebrum/neural_networks/gradient_computation.h"
 
 template<typename... info>
-struct 
+struct NetOutput;
+
+template<typename T, typename _InputS
