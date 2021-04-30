@@ -10,4 +10,5 @@
 template<typename... info>
 struct NetOutput;
 
-template<typename T, typename _InputS
+template<typename T, typename _InputSize, typename... LayersInfo>
+struct FeedForwardNet
