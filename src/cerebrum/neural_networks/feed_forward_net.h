@@ -13,4 +13,6 @@ struct NetOutput;
 template<typename T, typename _InputSize, typename... LayersInfo>
 struct FeedForwardNet {
   using DataType = T;
-  using Parameters = _Paramete
+  using Parameters = _Parameters<T, _InputSize, LayersInfo...>;
+
+  usi
