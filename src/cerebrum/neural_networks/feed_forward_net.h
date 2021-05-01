@@ -16,4 +16,6 @@ struct FeedForwardNet {
   using Parameters = _Parameters<T, _InputSize, LayersInfo...>;
 
   using InputSize = _InputSize;
-  using OutputSize = typename NetOutput<InputSize, LayersInfo...>::OutputSi
+  using OutputSize = typename NetOutput<InputSize, LayersInfo...>::OutputSize;
+
+  template <size_t batch_size, template<type
