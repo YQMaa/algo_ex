@@ -15,4 +15,5 @@ struct FeedForwardNet {
   using DataType = T;
   using Parameters = _Parameters<T, _InputSize, LayersInfo...>;
 
-  usi
+  using InputSize = _InputSize;
+  using OutputSize = typename
