@@ -19,4 +19,5 @@ struct FeedForwardNet {
   using OutputSize = typename NetOutput<InputSize, LayersInfo...>::OutputSize;
 
   template <size_t batch_size, template<typename> class ErrorFunction>
-  using ForwardCo
+  using ForwardComputation =
+    _ForwardComputation<T, batch_si
