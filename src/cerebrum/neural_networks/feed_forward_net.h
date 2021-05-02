@@ -21,4 +21,5 @@ struct FeedForwardNet {
   template <size_t batch_size, template<typename> class ErrorFunction>
   using ForwardComputation =
     _ForwardComputation<T, batch_size, ErrorFunction<T>,
-                      
+                        ErrorFunction<T>::transforms_last_layer,
+          
