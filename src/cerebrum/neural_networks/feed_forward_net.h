@@ -22,4 +22,6 @@ struct FeedForwardNet {
   using ForwardComputation =
     _ForwardComputation<T, batch_size, ErrorFunction<T>,
                         ErrorFunction<T>::transforms_last_layer,
-                        InputSize, LayersInfo...>
+                        InputSize, LayersInfo...>;
+
+  template <size_t batch_size, template<typena
