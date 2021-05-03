@@ -22,4 +22,4 @@ struct FeedForwardNet {
   using ForwardComputation =
     _ForwardComputation<T, batch_size, ErrorFunction<T>,
                         ErrorFunction<T>::transforms_last_layer,
-          
+                        InputSize, LayersInfo...>
