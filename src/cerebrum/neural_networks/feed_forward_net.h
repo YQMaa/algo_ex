@@ -24,4 +24,5 @@ struct FeedForwardNet {
                         ErrorFunction<T>::transforms_last_layer,
                         InputSize, LayersInfo...>;
 
-  template <size_t batch_size, template<typena
+  template <size_t batch_size, template<typename> class ErrorFunction>
+  using
