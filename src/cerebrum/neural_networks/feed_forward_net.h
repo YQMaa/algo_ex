@@ -27,4 +27,5 @@ struct FeedForwardNet {
   template <size_t batch_size, template<typename> class ErrorFunction>
   using GradientComputation =
     _GradientComputation<T, batch_size, ErrorFunction<T>,
-                         ErrorFunction<T>::transforms_last_laye
+                         ErrorFunction<T>::transforms_last_layer,
+                         InputSize, 
