@@ -28,4 +28,9 @@ struct FeedForwardNet {
   using GradientComputation =
     _GradientComputation<T, batch_size, ErrorFunction<T>,
                          ErrorFunction<T>::transforms_last_layer,
-                         InputSize, 
+                         InputSize, LayersInfo...>;
+
+};
+
+/* Tudor:
+ * Ex
