@@ -36,4 +36,5 @@ struct FeedForwardNet {
  * Extract size info from last layer
  */
 
-templat
+template <typename InputSize, typename LastLayer>
+s
