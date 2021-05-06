@@ -33,4 +33,7 @@ struct FeedForwardNet {
 };
 
 /* Tudor:
- * Ex
+ * Extract size info from last layer
+ */
+
+templat
