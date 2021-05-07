@@ -38,4 +38,4 @@ struct FeedForwardNet {
 
 template <typename InputSize, typename LastLayer>
 struct NetOutput<InputSize, LastLayer> {
-  using O
+  using OutputSize = typename LastLayer::template OutputSize<
