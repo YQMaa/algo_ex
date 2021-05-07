@@ -37,4 +37,5 @@ struct FeedForwardNet {
  */
 
 template <typename InputSize, typename LastLayer>
-s
+struct NetOutput<InputSize, LastLayer> {
+  using O
