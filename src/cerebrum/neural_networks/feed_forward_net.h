@@ -41,4 +41,5 @@ struct NetOutput<InputSize, LastLayer> {
   using OutputSize = typename LastLayer::template OutputSize<InputSize>;
 };
 
-template <typename InputSize, typename CrtLayer, typename... Ot
+template <typename InputSize, typename CrtLayer, typename... OtherLayers>
+struct NetOutput<InputSize, CrtLaye
