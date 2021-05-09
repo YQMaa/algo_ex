@@ -42,4 +42,5 @@ struct NetOutput<InputSize, LastLayer> {
 };
 
 template <typename InputSize, typename CrtLayer, typename... OtherLayers>
-struct NetOutput<InputSize, CrtLaye
+struct NetOutput<InputSize, CrtLayer, OtherLayers...> {
+  using CrtSize = typena
