@@ -44,4 +44,7 @@ struct NetOutput<InputSize, LastLayer> {
 template <typename InputSize, typename CrtLayer, typename... OtherLayers>
 struct NetOutput<InputSize, CrtLayer, OtherLayers...> {
   using CrtSize = typename CrtLayer::template OutputSize<InputSize>;
-  using OutputSize = typename NetOutput<CrtSize, OtherLayers...>::Out
+  using OutputSize = typename NetOutput<CrtSize, OtherLayers...>::OutputSize;
+};
+
+#endif
