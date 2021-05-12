@@ -26,3 +26,51 @@ struct _ForwardComputation<T, batch_size, ErrorFunction, false, LastSize> {
   forward(const NetOutputs& outputs, bool parameters) {
     y = &outputs;
     return outputs;
+  }
+
+  T error(const NetOutputs& labels) {
+    return ErrorFunction::template error<LastSize, batch_size>(*y, labels);
+  }
+};
+
+template<typename T, size_t batch_size, typename ErrorFunction,
+         typename LastSize>
+struct _ForwardComputation<T, batch_size, ErrorFunction, true, LastSize> {
+
+  using NetOutputs = std::array<std::array<T, LastSize::length>, batch_size>;
+  NetOutputs y;
+
+  const NetOutputs&
+  forward(const NetOutputs& outputs, bool parameters) {
+    ErrorFunction::f(outputs, y);
+    return y;
+  }
+
+  T error(const NetOutputs& labels) {
+    return ErrorFunction::template error<LastSize, batch_size>(y, labels);
+  }
+};
+
+template<typename T, size_t batch_size, typename ErrorFunction, bool computes,
+         typename InputSize, typename CrtLayer, typename... Others>
+struct _ForwardComputation<T, batch_size, ErrorFunction, computes,
+                           InputSize, CrtLayer, Others...> {
+
+  using Inputs =
+    typename CrtLayer::template Inputs<T, InputSize, batch_size>;
+  using Hidden =
+    typename CrtLayer::template Hidden<T, InputSize, batch_size>;
+  using Outputs =
+    typename CrtLayer::template Outputs<T, InputSize, batch_size>;
+
+  using OutputSize = typename CrtLayer::template OutputSize<InputSize>;
+  using NextComputation =
+    _ForwardComputation<T, batch_size, ErrorFunction, computes,
+                        OutputSize, Others...>;
+
+  using NetOutputs = typename NextComputation::NetOutputs;
+  using Parameters = _Parameters<T, InputSize, CrtLayer, Others...>;
+
+  Hidden hidden;
+  Outputs outputs;
+  NextComputation next;
