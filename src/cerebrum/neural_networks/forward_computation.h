@@ -74,3 +74,18 @@ struct _ForwardComputation<T, batch_size, ErrorFunction, computes,
   Hidden hidden;
   Outputs outputs;
   NextComputation next;
+
+  const NetOutputs&
+  forward(const Inputs& inputs, const Parameters& parameters) {
+    CrtLayer::template
+      forward<T, InputSize, batch_size, false>(inputs, parameters.values,
+                                               hidden, outputs);
+    return next.forward(outputs, parameters.next);
+  }
+
+  T error(const NetOutputs& labels) {
+    return next.error(labels);
+  }
+};
+
+#endif
