@@ -4,4 +4,6 @@
 #define GRADIENT_COMPUTATION_H
 
 #include <array>
-#include "cerebru
+#include "cerebrum/neural_networks/parameters.h"
+
+template
