@@ -1,3 +1,4 @@
 // Copyright (C) 2015 Tudor Berariu <tudor.berariu@gmail.com>
 
-#ifndef 
+#ifndef GRADIENT_COMPUTATION_H
+#define GRADIENT_COMPUTATIO
