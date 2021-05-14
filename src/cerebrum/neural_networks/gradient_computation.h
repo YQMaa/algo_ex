@@ -6,4 +6,4 @@
 #include <array>
 #include "cerebrum/neural_networks/parameters.h"
 
-template
+template<typename T, size_t batch_size, typename ErrorFu
