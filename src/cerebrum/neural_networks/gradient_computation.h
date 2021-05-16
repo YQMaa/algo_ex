@@ -10,4 +10,5 @@ template<typename T, size_t batch_size, typename ErrorFunction, bool computes,
          typename InputSize, typename... OtherLayers>
 struct _GradientComputation;
 
-template<typename T, size_t ba
+template<typename T, size_t batch_size, typename ErrorFunction,
+         ty
