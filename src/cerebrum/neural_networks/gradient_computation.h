@@ -11,4 +11,5 @@ template<typename T, size_t batch_size, typename ErrorFunction, bool computes,
 struct _GradientComputation;
 
 template<typename T, size_t batch_size, typename ErrorFunction,
-         ty
+         typename InputSize>
+struct _GradientComputation<T, batch_size
