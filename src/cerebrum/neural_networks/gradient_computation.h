@@ -12,4 +12,6 @@ struct _GradientComputation;
 
 template<typename T, size_t batch_size, typename ErrorFunction,
          typename InputSize>
-struct _GradientComputation<T, batch_size
+struct _GradientComputation<T, batch_size, ErrorFunction, true, InputSize> {
+
+  usin
