@@ -18,4 +18,5 @@ struct _GradientComputation<T, batch_size, ErrorFunction, true, InputSize> {
   NetOutputs y;
 
   T computeGradient(const NetOutputs& outputs, bool parameters,
-                    const NetOutputs
+                    const NetOutputs& labels,
+                    NetOutputs& prev_error
