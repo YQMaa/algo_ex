@@ -20,4 +20,5 @@ struct _GradientComputation<T, batch_size, ErrorFunction, true, InputSize> {
   T computeGradient(const NetOutputs& outputs, bool parameters,
                     const NetOutputs& labels,
                     NetOutputs& prev_errors, bool gradient) {
-    ErrorFunction::template f<
+    ErrorFunction::template f<InputSize, batch_size>(outputs, y);
+    Err
