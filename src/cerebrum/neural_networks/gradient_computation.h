@@ -23,4 +23,4 @@ struct _GradientComputation<T, batch_size, ErrorFunction, true, InputSize> {
     ErrorFunction::template f<InputSize, batch_size>(outputs, y);
     ErrorFunction::template
       dError<InputSize, batch_size>(y, labels, prev_errors);
-    return ErrorF
+    return ErrorFunction::template error<InputSize, batch_size>(y, label
