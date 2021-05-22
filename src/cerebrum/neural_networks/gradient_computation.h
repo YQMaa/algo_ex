@@ -29,4 +29,4 @@ struct _GradientComputation<T, batch_size, ErrorFunction, true, InputSize> {
 
 template<typename T, size_t batch_size, typename ErrorFunction,
          typename InputSize>
-struct _Gradi
+struct _GradientComputation<T, batch_size, ErrorFunction, false, Inp
