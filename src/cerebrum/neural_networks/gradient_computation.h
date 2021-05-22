@@ -29,4 +29,6 @@ struct _GradientComputation<T, batch_size, ErrorFunction, true, InputSize> {
 
 template<typename T, size_t batch_size, typename ErrorFunction,
          typename InputSize>
-struct _GradientComputation<T, batch_size, ErrorFunction, false, Inp
+struct _GradientComputation<T, batch_size, ErrorFunction, false, InputSize> {
+
+  using NetOutputs = std::array
