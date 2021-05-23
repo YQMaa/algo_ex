@@ -33,4 +33,5 @@ struct _GradientComputation<T, batch_size, ErrorFunction, false, InputSize> {
 
   using NetOutputs = std::array<std::array<T, InputSize::length>, batch_size>;
 
-  T computeGradient(const NetOutputs& ou
+  T computeGradient(const NetOutputs& outputs, bool parameters,
+                    
