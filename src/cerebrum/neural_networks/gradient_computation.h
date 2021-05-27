@@ -37,4 +37,9 @@ struct _GradientComputation<T, batch_size, ErrorFunction, false, InputSize> {
                     const NetOutputs& labels,
                     NetOutputs& prev_errors, bool gradient) {
     ErrorFunction::dError(outputs, labels, prev_errors);
-    return ErrorFunction:
+    return ErrorFunction::error(outputs, labels);
+  }
+};
+
+
+template<typen
