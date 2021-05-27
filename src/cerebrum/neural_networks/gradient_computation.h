@@ -42,4 +42,4 @@ struct _GradientComputation<T, batch_size, ErrorFunction, false, InputSize> {
 };
 
 
-template<typen
+template<typename T, size_t batch_size, typename ErrorFunction, bool comp
