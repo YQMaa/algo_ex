@@ -42,4 +42,5 @@ struct _GradientComputation<T, batch_size, ErrorFunction, false, InputSize> {
 };
 
 
-template<typename T, size_t batch_size, typename ErrorFunction, bool comp
+template<typename T, size_t batch_size, typename ErrorFunction, bool computes,
+         typename InputSize, typename CrtLayer, ty
