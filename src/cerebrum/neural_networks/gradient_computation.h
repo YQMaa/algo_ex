@@ -47,4 +47,4 @@ template<typename T, size_t batch_size, typename ErrorFunction, bool computes,
 struct _GradientComputation<T, batch_size, ErrorFunction, computes,
                             InputSize, CrtLayer, Others...> {
 
-  using
+  using Inputs  = typename CrtLayer::template Inputs<T
