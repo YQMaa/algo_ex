@@ -49,4 +49,6 @@ struct _GradientComputation<T, batch_size, ErrorFunction, computes,
 
   using Inputs  = typename CrtLayer::template Inputs<T, InputSize, batch_size>;
   using Hidden  = typename CrtLayer::template Hidden<T, InputSize, batch_size>;
-  using Outputs = typename CrtLayer::template Out
+  using Outputs = typename CrtLayer::template Outputs<T, InputSize, batch_size>;
+
+  using O
