@@ -53,4 +53,4 @@ struct _GradientComputation<T, batch_size, ErrorFunction, computes,
 
   using OutputSize = typename CrtLayer::template OutputSize<InputSize>;
   using NextComputation =
- 
+    _GradientComputation<T, batch_size, Er
