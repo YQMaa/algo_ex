@@ -56,4 +56,5 @@ struct _GradientComputation<T, batch_size, ErrorFunction, computes,
     _GradientComputation<T, batch_size, ErrorFunction, computes,
                          OutputSize, Others...>;
 
-  using NetOutp
+  using NetOutputs = typename NextComputation::NetOutputs;
+  using Par
