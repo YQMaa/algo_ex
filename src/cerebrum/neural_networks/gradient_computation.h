@@ -57,4 +57,8 @@ struct _GradientComputation<T, batch_size, ErrorFunction, computes,
                          OutputSize, Others...>;
 
   using NetOutputs = typename NextComputation::NetOutputs;
-  using Parameters = _Parameters<T, InputSize, CrtL
+  using Parameters = _Parameters<T, InputSize, CrtLayer, Others...>;
+
+  Hidden hidden;
+  Outputs outputs;
+ 
