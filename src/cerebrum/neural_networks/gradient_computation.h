@@ -61,4 +61,7 @@ struct _GradientComputation<T, batch_size, ErrorFunction, computes,
 
   Hidden hidden;
   Outputs outputs;
- 
+  Outputs errors;
+  NextComputation next;
+
+  T comp
