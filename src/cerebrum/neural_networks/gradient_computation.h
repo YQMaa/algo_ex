@@ -64,4 +64,4 @@ struct _GradientComputation<T, batch_size, ErrorFunction, computes,
   Outputs errors;
   NextComputation next;
 
-  T comp
+  T computeGradient(const Inputs& inputs, const Parame
