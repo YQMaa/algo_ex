@@ -69,4 +69,4 @@ struct _GradientComputation<T, batch_size, ErrorFunction, computes,
                        Parameters& gradient) {
     CrtLayer::template
       forward<T, InputSize, batch_size, true>(inputs, parameters.values,
-     
+                                           
