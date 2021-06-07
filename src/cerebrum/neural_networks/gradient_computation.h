@@ -67,4 +67,5 @@ struct _GradientComputation<T, batch_size, ErrorFunction, computes,
   T computeGradient(const Inputs& inputs, const Parameters& parameters,
                        const NetOutputs& labels, Inputs& prev_errors,
                        Parameters& gradient) {
-    CrtLa
+    CrtLayer::template
+      forward<T, InputS
