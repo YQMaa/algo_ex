@@ -73,4 +73,4 @@ struct _GradientComputation<T, batch_size, ErrorFunction, computes,
     T err = next.computeGradient(outputs, parameters.next, labels,
                                  errors, gradient.next);
     CrtLayer::template
-      ba
+      backpropagate<T, InputSize, batch_size>(inputs, p
