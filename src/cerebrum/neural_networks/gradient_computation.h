@@ -79,4 +79,4 @@ struct _GradientComputation<T, batch_size, ErrorFunction, computes,
     return err;
   }
 
-  T computeGradient
+  T computeGradient(const Inputs& inputs, const Parameters& paramete
