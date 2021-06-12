@@ -80,4 +80,4 @@ struct _GradientComputation<T, batch_size, ErrorFunction, computes,
   }
 
   T computeGradient(const Inputs& inputs, const Parameters& parameters,
-                    cons
+                    const NetOutputs& labels, Parameters& gradient) 
