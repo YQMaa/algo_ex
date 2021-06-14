@@ -82,4 +82,9 @@ struct _GradientComputation<T, batch_size, ErrorFunction, computes,
   T computeGradient(const Inputs& inputs, const Parameters& parameters,
                     const NetOutputs& labels, Parameters& gradient) {
     Inputs crt_errors;
-    return computeGradient(inputs, parameters, labels, crt_errors, gra
+    return computeGradient(inputs, parameters, labels, crt_errors, gradient);
+  }
+
+};
+
+#endif
