@@ -3,4 +3,6 @@
 #ifndef DROPOUT_H
 #define DROPOUT_H
 
-#include <cstdd
+#include <cstddef>
+#include <cstring>
+#include <arr
