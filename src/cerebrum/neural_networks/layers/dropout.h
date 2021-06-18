@@ -8,4 +8,7 @@
 #include <array>
 #include <random>
 
-#include "cerebrum/incl
+#include "cerebrum/include_cblas.h"
+#include "cerebrum/size.h"
+
+template<size_t
