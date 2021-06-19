@@ -11,4 +11,7 @@
 #include "cerebrum/include_cblas.h"
 #include "cerebrum/size.h"
 
-template<size_t
+template<size_t active_no>
+struct Dropout { 
+
+  /* --------------
