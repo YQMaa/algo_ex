@@ -14,4 +14,9 @@
 template<size_t active_no>
 struct Dropout { 
 
-  /* -------------------- OutputSize -------------------- *
+  /* -------------------- OutputSize -------------------- */
+
+ public:
+
+  template<typename InputSize>
+  using Outp
