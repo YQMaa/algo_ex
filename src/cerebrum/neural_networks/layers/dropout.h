@@ -21,4 +21,8 @@ struct Dropout {
   template<typename InputSize>
   using OutputSize = InputSize;
 
-  /* -------------------- Paramet
+  /* -------------------- Parameters -------------------- */
+
+ public:
+
+  template<typename InputSiz
