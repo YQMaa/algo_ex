@@ -25,4 +25,6 @@ struct Dropout {
 
  public:
 
-  template<typename InputSiz
+  template<typename InputSize>
+  static constexpr size_t
+  parameters_array_size()
