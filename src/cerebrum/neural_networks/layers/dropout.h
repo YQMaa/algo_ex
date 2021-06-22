@@ -27,4 +27,8 @@ struct Dropout {
 
   template<typename InputSize>
   static constexpr size_t
-  parameters_array_size()
+  parameters_array_size() {
+    return 0ul;
+  }
+
+  template<typena
