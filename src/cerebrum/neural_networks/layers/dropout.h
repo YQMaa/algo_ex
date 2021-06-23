@@ -38,4 +38,6 @@ struct Dropout {
   }
 
   template<typename T, typename InputSize>
-  using Paramet
+  using Parameters = std::array<T, 0>;
+
+  template<typename T, 
