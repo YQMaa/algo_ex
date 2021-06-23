@@ -37,4 +37,5 @@ struct Dropout {
     return 0ul;
   }
 
-  template<typename 
+  template<typename T, typename InputSize>
+  using Paramet
