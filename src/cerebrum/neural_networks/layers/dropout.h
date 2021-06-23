@@ -34,4 +34,7 @@ struct Dropout {
   template<typename InputSize>
   static constexpr size_t
   parameters_no() {
-    r
+    return 0ul;
+  }
+
+  template<typename 
