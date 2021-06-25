@@ -47,4 +47,5 @@ struct Dropout {
   /* -------------------- Inputs, Hidden, and Outputs -------------------- */
  public:
 
-  template<typenam
+  template<typename T, typename InputSize>
+  using Input
