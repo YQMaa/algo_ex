@@ -44,4 +44,4 @@ struct Dropout {
   inline static void
   init_parameters(Parameters<T, InputSize>&) { }
 
- 
+  /* -------------------- Inputs, Hidden, and Out
