@@ -54,4 +54,6 @@ struct Dropout {
   using Inputs = std::array<Input<T, InputSize>, batch_size>;
 
   template<typename T, typename InputSize>
-  using Output = Input<T, InputSi
+  using Output = Input<T, InputSize>;
+
+  template<typename T, typename InputSize, si
