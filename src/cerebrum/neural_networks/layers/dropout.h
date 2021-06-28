@@ -59,4 +59,4 @@ struct Dropout {
   template<typename T, typename InputSize, size_t batch_size>
   using Outputs = Inputs<T, InputSize, batch_size>;
 
-  template
+  template<typename T, typename InputSize, size_t batch_size
