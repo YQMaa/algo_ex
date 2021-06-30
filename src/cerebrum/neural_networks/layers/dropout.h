@@ -64,4 +64,5 @@ struct Dropout {
 
  private:
 
-  template<typename T, typename InputSiz
+  template<typename T, typename InputSize, size_t batch_size>
+  using _LinearI
