@@ -64,3 +64,4 @@ struct Dropout {
 
  private:
 
+  template<typename T, typename InputSiz
