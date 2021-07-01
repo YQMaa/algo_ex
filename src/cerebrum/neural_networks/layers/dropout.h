@@ -65,4 +65,6 @@ struct Dropout {
  private:
 
   template<typename T, typename InputSize, size_t batch_size>
-  using _LinearInputs = std::array<T, InputSize::length *
+  using _LinearInputs = std::array<T, InputSize::length * batch_size>;
+
+  template<typename T, typename Inp
