@@ -68,4 +68,6 @@ struct Dropout {
   using _LinearInputs = std::array<T, InputSize::length * batch_size>;
 
   template<typename T, typename InputSize, size_t batch_size>
-  using _LinearOutputs 
+  using _LinearOutputs = _LinearInputs<T, InputSize, batch_size>;
+
+  /* ---
