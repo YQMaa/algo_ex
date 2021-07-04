@@ -70,4 +70,8 @@ struct Dropout {
   template<typename T, typename InputSize, size_t batch_size>
   using _LinearOutputs = _LinearInputs<T, InputSize, batch_size>;
 
-  /* -------------------- Forward phase -------------------
+  /* -------------------- Forward phase -------------------- */
+
+ private:
+
+  template<typename T, 
