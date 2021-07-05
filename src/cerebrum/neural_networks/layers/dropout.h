@@ -74,4 +74,4 @@ struct Dropout {
 
  private:
 
-  template<typename T, 
+  template<typename T, typename InputSize, size_t batch_size, bool train>
