@@ -79,4 +79,4 @@ struct Dropout {
 
  public:
 
-  t
+  template<typename T, typename InputSize, size_t b
