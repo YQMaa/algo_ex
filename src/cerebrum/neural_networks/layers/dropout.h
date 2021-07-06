@@ -80,4 +80,5 @@ struct Dropout {
  public:
 
   template<typename T, typename InputSize, size_t batch_size, bool train>
-  inline stat
+  inline static void
+  forward(const Inputs<T, InputSize, ba
