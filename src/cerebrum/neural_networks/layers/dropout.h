@@ -84,4 +84,5 @@ struct Dropout {
   forward(const Inputs<T, InputSize, batch_size>& inputs,
           const Parameters<T, InputSize>& parameters,
           Hidden<T, InputSize, batch_size>& hidden,
-          Outputs<T, InputSize, batch_
+          Outputs<T, InputSize, batch_size>& outputs) {
+    _Forward<T, InputSize, batch_s
