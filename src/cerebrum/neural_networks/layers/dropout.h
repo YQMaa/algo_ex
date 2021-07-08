@@ -94,4 +94,4 @@ struct Dropout {
 #ifdef USE_CBLAS
 /*
  * Tudor
- * No cblas optimizat
+ * No cblas optimization yet as there is no element wise multipli
