@@ -91,4 +91,7 @@ struct Dropout {
 
  private:
 
-#ifdef 
+#ifdef USE_CBLAS
+/*
+ * Tudor
+ * No cblas optimizat
