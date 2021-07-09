@@ -94,4 +94,5 @@ struct Dropout {
 #ifdef USE_CBLAS
 /*
  * Tudor
- * No cblas optimization yet as there is no element wise multipli
+ * No cblas optimization yet as there is no element wise multiplication
+ * routine. Using a diagonal matrix made things 
