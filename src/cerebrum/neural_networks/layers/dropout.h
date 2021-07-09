@@ -99,4 +99,5 @@ struct Dropout {
  */
 #endif
 
-  template<typename T, typename Input
+  template<typename T, typename InputSize, size_t batch_size, bool train>
+  s
