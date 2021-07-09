@@ -95,4 +95,8 @@ struct Dropout {
 /*
  * Tudor
  * No cblas optimization yet as there is no element wise multiplication
- * routine. Using a diagonal matrix made things 
+ * routine. Using a diagonal matrix made things worse.
+ */
+#endif
+
+  template<typename T, typename Input
