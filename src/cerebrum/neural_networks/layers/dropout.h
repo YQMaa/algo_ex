@@ -104,4 +104,5 @@ struct Dropout {
     inline static void
     forward(const Inputs<T, InputSize, batch_size>& inputs,
             const Parameters<T, InputSize>&,
-            H
+            Hidden<T, InputSize, batch_size>& hidden,
+            Out
