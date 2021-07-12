@@ -105,4 +105,5 @@ struct Dropout {
     forward(const Inputs<T, InputSize, batch_size>& inputs,
             const Parameters<T, InputSize>&,
             Hidden<T, InputSize, batch_size>& hidden,
-            Out
+            Outputs<T, InputSize, batch_size>& outputs) {
+      if (train
