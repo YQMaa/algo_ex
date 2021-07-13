@@ -107,4 +107,5 @@ struct Dropout {
             Hidden<T, InputSize, batch_size>& hidden,
             Outputs<T, InputSize, batch_size>& outputs) {
       if (train) {
-        constexpr double p = (double)active_no / (d
+        constexpr double p = (double)active_no / (double)(InputSize::length);
+        std::rando
