@@ -106,4 +106,5 @@ struct Dropout {
             const Parameters<T, InputSize>&,
             Hidden<T, InputSize, batch_size>& hidden,
             Outputs<T, InputSize, batch_size>& outputs) {
-      if (train
+      if (train) {
+        constexpr double p = (double)active_no / (d
