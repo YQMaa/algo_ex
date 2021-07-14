@@ -108,4 +108,5 @@ struct Dropout {
             Outputs<T, InputSize, batch_size>& outputs) {
       if (train) {
         constexpr double p = (double)active_no / (double)(InputSize::length);
-        std::rando
+        std::random_device rd { };
+        std::default_rand
