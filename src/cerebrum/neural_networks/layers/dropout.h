@@ -110,4 +110,6 @@ struct Dropout {
         constexpr double p = (double)active_no / (double)(InputSize::length);
         std::random_device rd { };
         std::default_random_engine e {rd()};
-        std::bernoulli_dis
+        std::bernoulli_distribution take(p);
+
+        using InputRow 
