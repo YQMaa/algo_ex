@@ -109,4 +109,5 @@ struct Dropout {
       if (train) {
         constexpr double p = (double)active_no / (double)(InputSize::length);
         std::random_device rd { };
-        std::default_rand
+        std::default_random_engine e {rd()};
+        std::bernoulli_dis
