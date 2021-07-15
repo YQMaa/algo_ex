@@ -115,4 +115,5 @@ struct Dropout {
         using InputRow = Input<T, InputSize>;
         using OutputRow = Output<T, InputSize>;
 
-        for (size_t
+        for (size_t i = 0; i < InputSize::length; i++)
+          hi
