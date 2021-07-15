@@ -113,4 +113,6 @@ struct Dropout {
         std::bernoulli_distribution take(p);
 
         using InputRow = Input<T, InputSize>;
-        using OutputRow 
+        using OutputRow = Output<T, InputSize>;
+
+        for (size_t
