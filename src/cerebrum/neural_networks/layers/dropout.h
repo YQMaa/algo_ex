@@ -112,4 +112,5 @@ struct Dropout {
         std::default_random_engine e {rd()};
         std::bernoulli_distribution take(p);
 
-        using InputRow 
+        using InputRow = Input<T, InputSize>;
+        using OutputRow 
