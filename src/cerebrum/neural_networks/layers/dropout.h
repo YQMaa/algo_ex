@@ -116,4 +116,5 @@ struct Dropout {
         using OutputRow = Output<T, InputSize>;
 
         for (size_t i = 0; i < InputSize::length; i++)
-          hi
+          hidden[i] = (T)take(e);
+        for (size_t
