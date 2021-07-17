@@ -117,4 +117,5 @@ struct Dropout {
 
         for (size_t i = 0; i < InputSize::length; i++)
           hidden[i] = (T)take(e);
-        for (size_t
+        for (size_t n = 0; n < batch_size; n++) {
+          
