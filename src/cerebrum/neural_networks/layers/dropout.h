@@ -119,4 +119,5 @@ struct Dropout {
           hidden[i] = (T)take(e);
         for (size_t n = 0; n < batch_size; n++) {
           const InputRow& input_row =
-            *reinterpret_cast<const InputRow*>(
+            *reinterpret_cast<const InputRow*>(inputs[n].data());
+          OutputRow& outp
