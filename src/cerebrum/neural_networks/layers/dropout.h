@@ -120,4 +120,5 @@ struct Dropout {
         for (size_t n = 0; n < batch_size; n++) {
           const InputRow& input_row =
             *reinterpret_cast<const InputRow*>(inputs[n].data());
-          OutputRow& outp
+          OutputRow& output_row =
+            *reinterpret_cast<OutputRow*>(
