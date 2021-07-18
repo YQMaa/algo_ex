@@ -123,4 +123,4 @@ struct Dropout {
           OutputRow& output_row =
             *reinterpret_cast<OutputRow*>(outputs[n].data());
           for (size_t i = 0; i < InputSize::length; i++)
-            ou
+            output_row[i] = hidden[i] * input_row[i];
