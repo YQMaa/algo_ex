@@ -121,4 +121,5 @@ struct Dropout {
           const InputRow& input_row =
             *reinterpret_cast<const InputRow*>(inputs[n].data());
           OutputRow& output_row =
-            *reinterpret_cast<OutputRow*>(
+            *reinterpret_cast<OutputRow*>(outputs[n].data());
+          for
