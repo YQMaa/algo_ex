@@ -124,3 +124,6 @@ struct Dropout {
             *reinterpret_cast<OutputRow*>(outputs[n].data());
           for (size_t i = 0; i < InputSize::length; i++)
             output_row[i] = hidden[i] * input_row[i];
+        }
+      } else {
+        std::memcp
