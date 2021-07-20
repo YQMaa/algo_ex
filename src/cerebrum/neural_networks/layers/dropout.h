@@ -126,4 +126,9 @@ struct Dropout {
             output_row[i] = hidden[i] * input_row[i];
         }
       } else {
-        std::memcpy(outputs.data(), inputs.data(), sizeof(outp
+        std::memcpy(outputs.data(), inputs.data(), sizeof(outputs));
+      }
+    }
+  };
+
+  /* -------
