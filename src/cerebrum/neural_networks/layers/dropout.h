@@ -131,4 +131,4 @@ struct Dropout {
     }
   };
 
-  /* -------
+  /* -------------------- Backpropagation phase -------
