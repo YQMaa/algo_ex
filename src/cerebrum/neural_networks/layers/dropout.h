@@ -131,4 +131,8 @@ struct Dropout {
     }
   };
 
-  /* -------------------- Backpropagation phase -------
+  /* -------------------- Backpropagation phase -------------------- */
+
+ private:
+
+  template<typen
