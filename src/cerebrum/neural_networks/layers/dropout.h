@@ -140,4 +140,4 @@ struct Dropout {
 
  public:
 
-  template<ty
+  template<typename T, typename InputSize, size_t batch_size>
