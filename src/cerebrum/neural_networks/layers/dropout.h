@@ -142,4 +142,4 @@ struct Dropout {
 
   template<typename T, typename InputSize, size_t batch_size>
   static inline void
-  backpropagate
+  backpropagate(const Inputs<T, InputSize, batch_size>& inpu
