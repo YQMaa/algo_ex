@@ -141,3 +141,5 @@ struct Dropout {
  public:
 
   template<typename T, typename InputSize, size_t batch_size>
+  static inline void
+  backpropagate
