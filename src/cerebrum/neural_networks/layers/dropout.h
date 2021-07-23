@@ -144,4 +144,5 @@ struct Dropout {
   static inline void
   backpropagate(const Inputs<T, InputSize, batch_size>& inputs,
                 const Parameters<T, InputSize>& parameters,
-                const Hidden<T, InputS
+                const Hidden<T, InputSize, batch_size>& hidden,
+                const
