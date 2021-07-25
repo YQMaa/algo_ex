@@ -148,4 +148,4 @@ struct Dropout {
                 const Outputs<T, InputSize, batch_size>& outputs,
                 Outputs<T, InputSize, batch_size>& errors,
                 Parameters<T, InputSize>& gradients,
- 
+                Inputs<T, InputSize, batch_size>& pr
