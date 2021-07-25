@@ -149,4 +149,5 @@ struct Dropout {
                 Outputs<T, InputSize, batch_size>& errors,
                 Parameters<T, InputSize>& gradients,
                 Inputs<T, InputSize, batch_size>& prev_errors) {
-    _Backpropagate<T, InputSize, bat
+    _Backpropagate<T, InputSize, batch_size>::
+      backpropagate(inputs, parame
