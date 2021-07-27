@@ -156,4 +156,6 @@ struct Dropout {
 
  private:
 
-#
+#ifdef USE_CBLAS
+  /* Tudor:
+   * Nothing good her
