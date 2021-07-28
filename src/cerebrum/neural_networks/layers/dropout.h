@@ -158,4 +158,8 @@ struct Dropout {
 
 #ifdef USE_CBLAS
   /* Tudor:
-   * Nothing good her
+   * Nothing good here yet
+   */
+#endif
+
+  template<typename T, ty
