@@ -163,4 +163,6 @@ struct Dropout {
 #endif
 
   template<typename T, typename InputSize, size_t batch_size>
-  struct _Backpropagate 
+  struct _Backpropagate {
+    inline static void
+    backpropag
