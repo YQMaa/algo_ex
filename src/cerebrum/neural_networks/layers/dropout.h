@@ -166,4 +166,5 @@ struct Dropout {
   struct _Backpropagate {
     inline static void
     backpropagate(const Inputs<T, InputSize, batch_size>&,
-       
+                  const Parameters<T, InputSize>&,
+     
