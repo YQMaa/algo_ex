@@ -169,4 +169,6 @@ struct Dropout {
                   const Parameters<T, InputSize>&,
                   const Hidden<T, InputSize, batch_size>& hidden,
                   const Outputs<T, InputSize, batch_size>&,
-                  Outputs<T, InputSize, batch_size>& errors
+                  Outputs<T, InputSize, batch_size>& errors,
+                  Parameters<T, InputSize>&,
+             
