@@ -175,4 +175,5 @@ struct Dropout {
       using InputRow = Input<T, InputSize>;
       using OutputRow = Output<T, InputSize>;
       for (size_t n = 0; n < batch_size; n++) {
-        const
+        const OutputRow& error_row =
+          *reinte
