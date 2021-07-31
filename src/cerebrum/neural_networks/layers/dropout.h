@@ -174,4 +174,5 @@ struct Dropout {
                   Inputs<T, InputSize, batch_size>& prev_errors) {
       using InputRow = Input<T, InputSize>;
       using OutputRow = Output<T, InputSize>;
-      fo
+      for (size_t n = 0; n < batch_size; n++) {
+        const
