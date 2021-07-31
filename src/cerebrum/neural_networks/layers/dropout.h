@@ -171,4 +171,6 @@ struct Dropout {
                   const Outputs<T, InputSize, batch_size>&,
                   Outputs<T, InputSize, batch_size>& errors,
                   Parameters<T, InputSize>&,
-                  Inputs<T, InputSize, batch_size>& prev_errors) 
+                  Inputs<T, InputSize, batch_size>& prev_errors) {
+      using InputRow = Input<T, InputSize>;
+      usi
