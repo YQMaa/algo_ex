@@ -173,4 +173,5 @@ struct Dropout {
                   Parameters<T, InputSize>&,
                   Inputs<T, InputSize, batch_size>& prev_errors) {
       using InputRow = Input<T, InputSize>;
-      usi
+      using OutputRow = Output<T, InputSize>;
+      fo
