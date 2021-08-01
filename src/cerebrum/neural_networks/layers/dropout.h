@@ -177,4 +177,5 @@ struct Dropout {
       for (size_t n = 0; n < batch_size; n++) {
         const OutputRow& error_row =
           *reinterpret_cast<const OutputRow*>(errors[n].data());
- 
+        InputRow& prev_error_row =
+          *rei
