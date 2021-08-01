@@ -178,4 +178,5 @@ struct Dropout {
         const OutputRow& error_row =
           *reinterpret_cast<const OutputRow*>(errors[n].data());
         InputRow& prev_error_row =
-          *reinterpret_cast<InputRow*>(prev_errors[n].da
+          *reinterpret_cast<InputRow*>(prev_errors[n].data());
+        for (size_t i = 0; i < Inpu
