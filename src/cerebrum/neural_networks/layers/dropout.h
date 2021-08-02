@@ -180,4 +180,7 @@ struct Dropout {
         InputRow& prev_error_row =
           *reinterpret_cast<InputRow*>(prev_errors[n].data());
         for (size_t i = 0; i < InputSize::length; i++)
-          prev_error_row[i] =
+          prev_error_row[i] = hidden[i] * error_row[i];
+      }
+    }
+  };
