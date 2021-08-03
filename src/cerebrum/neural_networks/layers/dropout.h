@@ -184,3 +184,6 @@ struct Dropout {
       }
     }
   };
+};
+
+#endif
