@@ -128,3 +128,57 @@ struct FullyConnected {
                   InputSize::length,
                   reinterpret_cast<const float*>(&(parameters[length])),
                   InputSize::length,
+                  1.0, reinterpret_cast<float*>(hidden.data()), length);
+
+      TransferFunction<float>::template
+        f_batch<OutputSize<InputSize>, batch_size>(hidden, outputs);
+    }
+  };
+
+  template<typename InputSize, size_t batch_size, bool train>
+  struct _Forward<double, InputSize, batch_size, train> {
+    inline static void
+    forward(const Inputs<double, InputSize, batch_size>& inputs,
+            const Parameters<double, InputSize>& parameters,
+            Hidden<double, InputSize, batch_size>& hidden,
+            Outputs<double, InputSize, batch_size>& outputs){
+      for (size_t n = 0; n < batch_size; n++) {
+        cblas_dcopy(length,
+                    reinterpret_cast<const double*>(parameters.data()), 1,
+                    reinterpret_cast<double*>(hidden[n].data()), 1);
+      }
+      cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasTrans,
+                  batch_size, length, InputSize::length,
+                  1.0, reinterpret_cast<const double*>(inputs.data()),
+                  InputSize::length,
+                  reinterpret_cast<const double*>(&(parameters[length])),
+                  InputSize::length,
+                  1.0, reinterpret_cast<double*>(hidden.data()), length);
+
+      TransferFunction<double>::template
+        f_batch<OutputSize<InputSize>, batch_size>(hidden, outputs);
+    }
+  };
+#endif
+
+  template<typename T, typename InputSize, size_t batch_size, bool train>
+  struct _Forward {
+    inline static void
+    forward(const Inputs<T, InputSize, batch_size>& inputs,
+            const Parameters<T, InputSize>& parameters,
+            Hidden<T, InputSize, batch_size>& hidden,
+            Outputs<T, InputSize, batch_size>& outputs) {
+
+      using Biases = _Biases<T, InputSize>;
+      using Weights = _Weights<T, InputSize>;
+      using WeightsRow = _WeightsRow<T, InputSize>;
+      using InputRow = Input<T, InputSize>;
+      using OutputRow = Output<T, InputSize>;
+
+      const Biases& biases =
+        *reinterpret_cast<const Biases*>(parameters.data());
+      const Weights& weights =
+        *reinterpret_cast<const Weights*>(&(parameters[length]));
+
+      for (size_t n = 0; n < batch_size; n++) {
+        const InputRow& input_row =
