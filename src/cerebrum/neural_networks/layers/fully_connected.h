@@ -82,3 +82,49 @@ struct FullyConnected {
   using Input = std::array<T, InputSize::length>;
 
   template<typename T, typename InputSize, size_t batch_size>
+  using Inputs = std::array<Input<T, InputSize>, batch_size>;
+
+  template<typename T, typename InputSize>
+  using Output = std::array<T, OutputSize<InputSize>::length>;
+
+  template<typename T, typename InputSize, size_t batch_size>
+  using Outputs = std::array<Output<T, InputSize>, batch_size>;
+
+  template<typename T, typename InputSize, size_t batch_size>
+  using Hidden = Outputs<T, OutputSize<InputSize>, batch_size>;
+
+  /* -------------------- Forward phase -------------------- */
+
+  template<typename T, typename InputSize, size_t batch_size, bool train>
+  struct _Forward;
+
+  template<typename T, typename InputSize, size_t batch_size, bool train>
+  inline static void
+  forward(const Inputs<T, InputSize, batch_size>& inputs,
+          const Parameters<T, InputSize>& parameters,
+          Hidden<T, InputSize, batch_size>& hidden,
+          Outputs<T, InputSize, batch_size>& outputs) {
+    _Forward<T, InputSize, batch_size, train>::
+      forward(inputs, parameters, hidden, outputs);
+  }
+
+
+#ifdef USE_CBLAS
+
+  template<typename InputSize, size_t batch_size, bool train>
+  struct _Forward<float, InputSize, batch_size, train> {
+    static void forward(const Inputs<float, InputSize, batch_size>& inputs,
+                        const Parameters<float, InputSize>& parameters,
+                        Hidden<float, InputSize, batch_size>& hidden,
+                        Outputs<float, InputSize, batch_size>& outputs) {
+      for (size_t n = 0; n < batch_size; n++) {
+        cblas_scopy(length,
+                    reinterpret_cast<const float*>(parameters.data()), 1,
+                    reinterpret_cast<float*>(hidden[n].data()), 1);
+      }
+      cblas_sgemm(CblasRowMajor, CblasNoTrans, CblasTrans,
+                  batch_size, length, InputSize::length,
+                  1.0, reinterpret_cast<const float*>(inputs.data()),
+                  InputSize::length,
+                  reinterpret_cast<const float*>(&(parameters[length])),
+                  InputSize::length,
