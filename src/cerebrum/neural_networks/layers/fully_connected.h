@@ -182,3 +182,52 @@ struct FullyConnected {
 
       for (size_t n = 0; n < batch_size; n++) {
         const InputRow& input_row =
+          *reinterpret_cast<const InputRow*>(inputs[n].data());
+        OutputRow& hidden_row =
+          *reinterpret_cast<OutputRow*>(hidden[n].data());
+        OutputRow& output_row =
+          *reinterpret_cast<OutputRow*>(outputs[n].data());
+
+        for (size_t j = 0; j < length; j++) {
+          const WeightsRow& weights_row =
+            *reinterpret_cast<const WeightsRow*>(weights[j].data());
+          hidden_row[j] = biases[j];
+          for (size_t i = 0; i < InputSize::length; i++) {
+            hidden_row[j] += input_row[i] * weights_row[i];
+          }
+          output_row[j] = TransferFunction<T>::f(hidden_row[j]);
+        }
+      }
+    }
+  };
+
+  /* -------------------- Backpropagation phase -------------------- */
+
+  template<typename T, typename InputSize, size_t batch_size>
+  struct _Backpropagate;
+
+  template<typename T, typename InputSize, size_t batch_size>
+  static inline void
+  backpropagate(const Inputs<T, InputSize, batch_size>& inputs,
+                const Parameters<T, InputSize>& parameters,
+                const Hidden<T, InputSize, batch_size>& hidden,
+                const Outputs<T, InputSize, batch_size>& outputs,
+                Outputs<T, InputSize, batch_size>& errors,
+                Parameters<T, InputSize>& gradients,
+                Inputs<T, InputSize, batch_size>& prev_errors) {
+    _Backpropagate<T, InputSize, batch_size>::
+      backpropagate(inputs, parameters, hidden, outputs, errors, gradients,
+                    prev_errors);
+  }
+
+#ifdef USE_CBLAS
+
+  template<typename InputSize, size_t batch_size>
+  struct _Backpropagate<float, InputSize, batch_size> {
+    inline static void
+    backpropagate(const Inputs<float, InputSize, batch_size>& inputs,
+                  const Parameters<float, InputSize>& parameters,
+                  const Hidden<float, InputSize, batch_size>& hidden,
+                  const Outputs<float, InputSize, batch_size>& outputs,
+                  Outputs<float, InputSize, batch_size>& errors,
+                  Parameters<float, InputSize>& gradients,
