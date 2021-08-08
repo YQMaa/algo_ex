@@ -231,3 +231,50 @@ struct FullyConnected {
                   const Outputs<float, InputSize, batch_size>& outputs,
                   Outputs<float, InputSize, batch_size>& errors,
                   Parameters<float, InputSize>& gradients,
+                  Inputs<float, InputSize, batch_size>& prev_errors) {
+      TransferFunction<float>::template
+        df_batch<OutputSize<InputSize>, batch_size>(outputs, errors);
+      cblas_sgemm(CblasRowMajor, CblasTrans, CblasNoTrans,
+                  length, InputSize::length, batch_size,
+                  1.0, reinterpret_cast<const float*>(errors.data()),
+                  length,
+                  reinterpret_cast<const float*>(inputs.data()),
+                  InputSize::length,
+                  0.0, reinterpret_cast<float*>(&(gradients[length])),
+                  InputSize::length);
+      // not sure if faster, tests need to be done
+      using Biases = _Biases<float, InputSize>;
+      Biases ones;
+      std::fill(ones.begin(), ones.end(), 1.0);
+      cblas_sgemv(CblasRowMajor, CblasTrans,
+                  batch_size, length,
+                  1.0, reinterpret_cast<const float*>(errors.data()),
+                  length,
+                  reinterpret_cast<const float*>(ones.data()), 1,
+                  0.0, reinterpret_cast<float*>(gradients.data()), 1);
+
+      cblas_sgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans,
+                  batch_size, InputSize::length, length,
+                  1.0, reinterpret_cast<const float*>(errors.data()),
+                  length,
+                  reinterpret_cast<const float*>(&(parameters[length])),
+                  InputSize::length,
+                  0.0, reinterpret_cast<float*>(prev_errors.data()),
+                  InputSize::length);
+    }
+  };
+
+  template<typename InputSize, size_t batch_size>
+  struct _Backpropagate<double, InputSize, batch_size> {
+    inline static void
+    backpropagate(const Inputs<double, InputSize, batch_size>& inputs,
+                  const Parameters<double, InputSize>& parameters,
+                  const Hidden<double, InputSize, batch_size>& hidden,
+                  const Outputs<double, InputSize, batch_size>& outputs,
+                  Outputs<double, InputSize, batch_size>& errors,
+                  Parameters<double, InputSize>& gradients,
+                  Inputs<double, InputSize, batch_size>& prev_errors) {
+      TransferFunction<double>::template
+        df_batch<OutputSize<InputSize>, batch_size>(outputs, errors);
+      cblas_dgemm(CblasRowMajor, CblasTrans, CblasNoTrans,
+                  length, InputSize::length, batch_size,
