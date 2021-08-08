@@ -278,3 +278,39 @@ struct FullyConnected {
         df_batch<OutputSize<InputSize>, batch_size>(outputs, errors);
       cblas_dgemm(CblasRowMajor, CblasTrans, CblasNoTrans,
                   length, InputSize::length, batch_size,
+                  1.0, reinterpret_cast<const double*>(errors.data()),
+                  length,
+                  reinterpret_cast<const double*>(inputs.data()),
+                  InputSize::length,
+                  0.0, reinterpret_cast<double*>(&(gradients[length])),
+                  InputSize::length);
+      // not sure if faster, tests need to be done
+      using Biases = _Biases<double, InputSize>;
+      Biases ones;
+      std::fill(ones.begin(), ones.end(), 1.0);
+      cblas_dgemv(CblasRowMajor, CblasTrans,
+                  batch_size, length,
+                  1.0, reinterpret_cast<const double*>(errors.data()),
+                  length,
+                  reinterpret_cast<const double*>(ones.data()), 1,
+                  0.0, reinterpret_cast<double*>(gradients.data()), 1);
+
+      cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans,
+                  batch_size, InputSize::length, length,
+                  1.0, reinterpret_cast<const double*>(errors.data()),
+                  length,
+                  reinterpret_cast<const double*>(&(parameters[length])),
+                  InputSize::length,
+                  0.0, reinterpret_cast<double*>(prev_errors.data()),
+                  InputSize::length);
+    }
+  };
+
+#endif
+
+  template<typename T, typename InputSize, size_t batch_size>
+  struct _Backpropagate {
+    inline static void
+    backpropagate(const Inputs<T, InputSize, batch_size>& inputs,
+                  const Parameters<T, InputSize>& parameters,
+                  const Hidden<T, InputSize, batch_size>&,
