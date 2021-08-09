@@ -314,3 +314,52 @@ struct FullyConnected {
     backpropagate(const Inputs<T, InputSize, batch_size>& inputs,
                   const Parameters<T, InputSize>& parameters,
                   const Hidden<T, InputSize, batch_size>&,
+                  const Outputs<T, InputSize, batch_size>& outputs,
+                  Outputs<T, InputSize, batch_size>& errors,
+                  Parameters<T, InputSize>& gradients,
+                  Inputs<T, InputSize, batch_size>& prev_errors) {
+
+      using Weights = _Weights<T, InputSize>;
+      using LinearWeights = _LinearWeights<T, InputSize>;
+      using WeightsRow = _WeightsRow<T, InputSize>;
+      using Biases = _Biases<T, InputSize>;
+
+      using InputRow = Input<T, InputSize>;
+      using OutputRow = Output<T, InputSize>;
+
+      const Weights& weights =
+        *reinterpret_cast<const Weights*>(&(parameters[length]));
+
+      Biases& g_biases = *reinterpret_cast<Biases*>(gradients.data());
+      Weights& g_weights = *reinterpret_cast<Weights*>(&(gradients[length]));
+      LinearWeights& g_linear_weights =
+        *reinterpret_cast<LinearWeights*>(&g_weights);
+
+      std::fill(g_biases.begin(), g_biases.end(), (T)0);
+      std::fill(g_linear_weights.begin(), g_linear_weights.end(), (T)0);
+
+      for (size_t n = 0; n < batch_size; n++) {
+        std::fill(prev_errors[n].begin(), prev_errors[n].end(), (T)0);
+
+        const OutputRow& output_row =
+          *reinterpret_cast<const OutputRow*>(outputs[n].data());
+        OutputRow& errors_row =
+          *reinterpret_cast<OutputRow*>(errors[n].data());
+        const InputRow& input_row =
+          *reinterpret_cast<const InputRow*>(inputs[n].data());
+        InputRow& prev_err_row =
+          *reinterpret_cast<InputRow*>(prev_errors[n].data());
+
+        for (size_t j = 0; j < length; j++) {
+          const WeightsRow& weights_row =
+            *reinterpret_cast<const WeightsRow*>(weights[j].data());
+          WeightsRow& g_weights_row =
+            *reinterpret_cast<WeightsRow*>(g_weights[j].data());
+
+          errors_row[j] *= TransferFunction<T>::df(output_row[j]);
+
+          const T err_n_j = errors_row[j];
+          g_biases[j] += err_n_j;
+          for (size_t i = 0; i < InputSize::length; i++) {
+            g_weights_row[i] += input_row[i] * err_n_j;
+            prev_err_row[i] += err_n_j * weights_row[i];
