@@ -363,3 +363,12 @@ struct FullyConnected {
           for (size_t i = 0; i < InputSize::length; i++) {
             g_weights_row[i] += input_row[i] * err_n_j;
             prev_err_row[i] += err_n_j * weights_row[i];
+          }
+        }
+      }
+
+    }
+  };
+};
+
+#endif
