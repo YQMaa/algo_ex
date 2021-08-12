@@ -4,3 +4,7 @@
 #define MAX_POOLING_H
 
 #include <cstddef>
+#include <limits>
+#include <array>
+
+#include "ce
