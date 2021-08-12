@@ -7,4 +7,6 @@
 #include <limits>
 #include <array>
 
-#include "ce
+#include "cerebrum/size.h"
+
+template<size_t pool_height, s
