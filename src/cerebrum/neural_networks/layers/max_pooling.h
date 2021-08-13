@@ -9,4 +9,7 @@
 
 #include "cerebrum/size.h"
 
-template<size_t pool_height, s
+template<size_t pool_height, size_t pool_width>
+struct MaxPooling {
+
+  /* ---
