@@ -12,4 +12,8 @@
 template<size_t pool_height, size_t pool_width>
 struct MaxPooling {
 
-  /* -------------------- OutputSize -----------
+  /* -------------------- OutputSize -------------------- */
+
+ public:
+
+  template<typename Inp
