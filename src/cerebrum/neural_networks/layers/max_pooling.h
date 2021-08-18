@@ -18,4 +18,5 @@ struct MaxPooling {
 
   template<typename InputSize>
   using OutputSize =
-    Size<InputSize
+    Size<InputSize::maps_no,
+         InputSize::height / pool_
