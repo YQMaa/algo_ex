@@ -21,3 +21,5 @@ struct MaxPooling {
     Size<InputSize::maps_no,
          InputSize::height / pool_height,
          InputSize::width / pool_width>;
+
+  /* -------------------- Parameters -----
