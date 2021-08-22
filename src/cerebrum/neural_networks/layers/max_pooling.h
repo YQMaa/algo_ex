@@ -22,4 +22,8 @@ struct MaxPooling {
          InputSize::height / pool_height,
          InputSize::width / pool_width>;
 
-  /* -------------------- Parameters -----
+  /* -------------------- Parameters -------------------- */
+
+ public:
+
+  template<typename InputSize>
