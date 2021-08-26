@@ -32,4 +32,6 @@ struct MaxPooling {
     return 0ul;
   }
 
-  template<typenam
+  template<typename InputSize>
+  static constexpr size_t
+  parameter
