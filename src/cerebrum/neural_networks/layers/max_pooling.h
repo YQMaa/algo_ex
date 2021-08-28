@@ -39,4 +39,6 @@ struct MaxPooling {
   }
 
   template<typename T, typename InputSize>
-  using Parameters =
+  using Parameters = std::array<T, 0>;
+
+  template<typename 
