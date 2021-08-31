@@ -43,4 +43,6 @@ struct MaxPooling {
 
   template<typename T, typename InputSize>
   inline static void
- 
+  init_parameters(Parameters<T, InputSize>&) { }
+
+  /* -
