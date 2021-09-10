@@ -57,4 +57,5 @@ struct MaxPooling {
 
  private:
 
-  template
+  template<typename T, typename InputSize>
+  using _Inp
