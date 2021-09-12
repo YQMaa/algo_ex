@@ -61,4 +61,5 @@ struct MaxPooling {
   using _InputMap =
     std::array<std::array<T, InputSize::width>, InputSize::height>;
 
-  template<typenam
+  template<typename T, typename InputSize>
+  using _InputM
