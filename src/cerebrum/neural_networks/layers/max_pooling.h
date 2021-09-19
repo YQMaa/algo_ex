@@ -71,4 +71,6 @@ struct MaxPooling {
  public:
 
   template<typename T, typename InputSize>
-  using Output =
+  using Output = std::array<T, OutputSize<InputSize>::length>;
+
+  tem
