@@ -73,4 +73,5 @@ struct MaxPooling {
   template<typename T, typename InputSize>
   using Output = std::array<T, OutputSize<InputSize>::length>;
 
-  template <typename T, typename InputSize, size_t batc
+  template <typename T, typename InputSize, size_t batch_size>
+  using Outputs = std::array<Ou
