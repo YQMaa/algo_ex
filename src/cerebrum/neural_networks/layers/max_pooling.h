@@ -78,4 +78,5 @@ struct MaxPooling {
 
  private:
 
-  templa
+  template<typename T, typename InputSize>
+  using 
