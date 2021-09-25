@@ -83,4 +83,5 @@ struct MaxPooling {
     std::array<std::array<T, OutputSize<InputSize>::width>,
                OutputSize<InputSize>::height>;
 
-  template<typenam
+  template<typename T, typename InputSize>
+  using _O
