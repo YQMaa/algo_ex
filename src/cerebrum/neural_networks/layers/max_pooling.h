@@ -84,4 +84,5 @@ struct MaxPooling {
                OutputSize<InputSize>::height>;
 
   template<typename T, typename InputSize>
-  using _O
+  using _OutputMaps =
+    std::array<_OutputMap<T, InputSiz
