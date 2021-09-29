@@ -90,4 +90,8 @@ struct MaxPooling {
   template<typename T, typename InputSize, size_t batch_size>
   using _Outputs = std::array<_OutputMaps<T, InputSize>, batch_size>;
 
-  using HiddenValue = std::pa
+  using HiddenValue = std::pair<size_t, size_t>;
+
+ public:
+
+  template <ty
