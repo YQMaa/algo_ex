@@ -95,4 +95,6 @@ struct MaxPooling {
  public:
 
   template <typename T, typename InputSize, size_t batch_size>
-  using Hidden = Outputs<HiddenValue, In
+  using Hidden = Outputs<HiddenValue, InputSize, batch_size>;
+
+  /* -------------------- For
