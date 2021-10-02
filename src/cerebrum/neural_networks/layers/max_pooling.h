@@ -99,4 +99,6 @@ struct MaxPooling {
 
   /* -------------------- Forward phase -------------------- */
 
- priva
+ private:
+
+  template<typename T, typename
