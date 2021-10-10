@@ -112,4 +112,5 @@ struct MaxPooling {
           const Parameters<T, InputSize>& parameters,
           Hidden<T, InputSize, batch_size>& hidden,
           Outputs<T, InputSize, batch_size>& outputs) {
-    _Forwar
+    _Forward<T, InputSize, batch_size, train>::
+      f
