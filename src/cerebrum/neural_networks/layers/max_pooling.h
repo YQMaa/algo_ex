@@ -113,4 +113,9 @@ struct MaxPooling {
           Hidden<T, InputSize, batch_size>& hidden,
           Outputs<T, InputSize, batch_size>& outputs) {
     _Forward<T, InputSize, batch_size, train>::
-      forward(inputs, parameters, hidden, ou
+      forward(inputs, parameters, hidden, outputs);
+  }
+
+ private:
+
+  template<typename T
