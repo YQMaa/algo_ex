@@ -118,4 +118,6 @@ struct MaxPooling {
 
  private:
 
-  template<typename T, typename InputSize, size_t batch_size, 
+  template<typename T, typename InputSize, size_t batch_size, bool train>
+  struct _Forward {
+    inline stat
