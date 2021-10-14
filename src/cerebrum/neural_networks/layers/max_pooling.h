@@ -120,4 +120,5 @@ struct MaxPooling {
 
   template<typename T, typename InputSize, size_t batch_size, bool train>
   struct _Forward {
-    inline stat
+    inline static void
+    forward(const Inputs<T, InputSize, batch_si
