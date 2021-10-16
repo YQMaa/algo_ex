@@ -124,4 +124,5 @@ struct MaxPooling {
     forward(const Inputs<T, InputSize, batch_size>& inputs,
             const Parameters<T, InputSize>&,
             Hidden<T, InputSize, batch_size>& hidden,
-            Outputs<T, Input
+            Outputs<T, InputSize, batch_size>& outputs) {
+      using __Inputs = _
