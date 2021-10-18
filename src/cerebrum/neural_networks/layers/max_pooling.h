@@ -126,4 +126,4 @@ struct MaxPooling {
             Hidden<T, InputSize, batch_size>& hidden,
             Outputs<T, InputSize, batch_size>& outputs) {
       using __Inputs = _Inputs<T, InputSize, batch_size>;
-      us
+      using __Outputs = _Outputs<T, InputSize, batc
