@@ -131,4 +131,6 @@ struct MaxPooling {
 
       using __InputMap = _InputMap<T, InputSize>;
       using __OutputMap = _OutputMap<T, InputSize>;
-      using __HiddenMap = _OutputMap<HiddenV
+      using __HiddenMap = _OutputMap<HiddenValue, InputSize>;
+
+      const __Inputs& _inputs =
