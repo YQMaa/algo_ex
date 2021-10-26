@@ -133,4 +133,5 @@ struct MaxPooling {
       using __OutputMap = _OutputMap<T, InputSize>;
       using __HiddenMap = _OutputMap<HiddenValue, InputSize>;
 
-      const __Inputs& _inputs = *reinterpret_cast<const __Inputs*>(&in
+      const __Inputs& _inputs = *reinterpret_cast<const __Inputs*>(&inputs);
+      __Outputs& _outputs = *reinterpret_c
