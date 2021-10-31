@@ -137,4 +137,5 @@ struct MaxPooling {
       __Outputs& _outputs = *reinterpret_cast<__Outputs*>(&outputs);
       __Hidden& _hidden = *reinterpret_cast<__Hidden*>(&hidden);
 
-      f
+      for (size_t n = 0; n < batch_size; n++) {
+       
