@@ -141,3 +141,5 @@ struct MaxPooling {
         for (size_t m = 0; m < OutputSize<InputSize>::maps_no; m++) {
           const __InputMap& input_map =
             *reinterpret_cast<const __InputMap*>(_inputs[n][m].data());
+          __OutputMap& output_map =
+        
