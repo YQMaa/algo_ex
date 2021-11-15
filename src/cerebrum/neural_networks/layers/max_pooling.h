@@ -147,4 +147,4 @@ struct MaxPooling {
             *reinterpret_cast<__HiddenMap*>(_hidden[n][m].data());
 
           for (int r = 0; r < OutputSize<InputSize>::height; r++) {
-            for (i
+            for (int c = 0; c < OutputSize<InputSize>::width; c++) 
