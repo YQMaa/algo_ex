@@ -149,4 +149,4 @@ struct MaxPooling {
           for (int r = 0; r < OutputSize<InputSize>::height; r++) {
             for (int c = 0; c < OutputSize<InputSize>::width; c++) {
               T max = std::numeric_limits<T>::lowest();
-              for (size_t i = r * pool_h
+              for (size_t i = r * pool_height; i < (r+1) * pool_height; i++)
