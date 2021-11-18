@@ -151,4 +151,5 @@ struct MaxPooling {
               T max = std::numeric_limits<T>::lowest();
               for (size_t i = r * pool_height; i < (r+1) * pool_height; i++) {
                 for (size_t j = c * pool_width; j < (c+1) * pool_width; j++) {
-                  if (in
+                  if (input_map[i][j] > max) {
+                    
