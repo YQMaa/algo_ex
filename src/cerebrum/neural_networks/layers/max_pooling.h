@@ -153,4 +153,5 @@ struct MaxPooling {
                 for (size_t j = c * pool_width; j < (c+1) * pool_width; j++) {
                   if (input_map[i][j] > max) {
                     max = input_map[i][j];
-                    
+                    hidden_map[r][c].first = i;
+                    hidden_ma
