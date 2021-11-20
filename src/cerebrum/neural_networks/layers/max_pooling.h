@@ -154,4 +154,6 @@ struct MaxPooling {
                   if (input_map[i][j] > max) {
                     max = input_map[i][j];
                     hidden_map[r][c].first = i;
-                    hidden_ma
+                    hidden_map[r][c].second = j;
+                  }
+             
