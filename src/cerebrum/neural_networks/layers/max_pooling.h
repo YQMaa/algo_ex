@@ -156,4 +156,6 @@ struct MaxPooling {
                     hidden_map[r][c].first = i;
                     hidden_map[r][c].second = j;
                   }
-             
+                }
+              }
+              output_map
