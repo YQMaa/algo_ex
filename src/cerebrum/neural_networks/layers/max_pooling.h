@@ -161,3 +161,9 @@ struct MaxPooling {
               output_map[r][c] = max;
             }
           }
+        }
+      }
+    }
+  };
+
+  /* ---
