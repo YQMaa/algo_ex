@@ -166,4 +166,4 @@ struct MaxPooling {
     }
   };
 
-  /* ---
+  /* -------------------- Backpropagation phase -----------------
