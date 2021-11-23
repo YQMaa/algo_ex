@@ -166,4 +166,8 @@ struct MaxPooling {
     }
   };
 
-  /* -------------------- Backpropagation phase -----------------
+  /* -------------------- Backpropagation phase -------------------- */
+
+ private:
+
+  template<typename T, typ
