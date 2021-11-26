@@ -171,4 +171,8 @@ struct MaxPooling {
  private:
 
   template<typename T, typename InputSize, size_t batch_size>
-  struct _Bac
+  struct _Backpropagate;
+
+ public:
+
+  template<typename T, typename
