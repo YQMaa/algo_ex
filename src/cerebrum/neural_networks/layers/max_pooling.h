@@ -176,4 +176,5 @@ struct MaxPooling {
  public:
 
   template<typename T, typename InputSize, size_t batch_size>
-  static inl
+  static inline void
+  backpropagate(const Inpu
