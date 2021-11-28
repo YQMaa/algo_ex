@@ -177,4 +177,5 @@ struct MaxPooling {
 
   template<typename T, typename InputSize, size_t batch_size>
   static inline void
-  backpropagate(const Inpu
+  backpropagate(const Inputs<T, InputSize, batch_size>& inputs,
+         
