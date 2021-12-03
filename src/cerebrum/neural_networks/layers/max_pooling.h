@@ -180,4 +180,5 @@ struct MaxPooling {
   backpropagate(const Inputs<T, InputSize, batch_size>& inputs,
                 const Parameters<T, InputSize>& parameters,
                 const Hidden<T, InputSize, batch_size>& hidden,
-                const Outputs<T, InputS
+                const Outputs<T, InputSize, batch_size>& outputs,
+              
