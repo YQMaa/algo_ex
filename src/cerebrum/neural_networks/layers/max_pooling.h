@@ -185,4 +185,4 @@ struct MaxPooling {
                 Parameters<T, InputSize>& gradients,
                 Inputs<T, InputSize, batch_size>& prev_errors) {
     _Backpropagate<T, InputSize, batch_size>::
-      ba
+      backpropagate(inputs, parameters, hidd
