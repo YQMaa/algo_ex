@@ -195,4 +195,4 @@ struct MaxPooling {
   struct _Backpropagate {
     static void backpropagate(const Inputs<T, InputSize, batch_size>&,
                               const Parameters<T, InputSize>&,
-          
+                              const Hidden<T, InputSize, batch_si
