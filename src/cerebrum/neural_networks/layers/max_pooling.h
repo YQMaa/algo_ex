@@ -198,4 +198,5 @@ struct MaxPooling {
                               const Hidden<T, InputSize, batch_size>& hidden,
                               const Outputs<T, InputSize, batch_size>&,
                               Outputs<T, InputSize, batch_size>& errors,
-                              Paramet
+                              Parameters<T, InputSize>&,
+                            
