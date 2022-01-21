@@ -200,4 +200,5 @@ struct MaxPooling {
                               Outputs<T, InputSize, batch_size>& errors,
                               Parameters<T, InputSize>&,
                               Inputs<T, InputSize, batch_size>& prev_errors) {
-      using __Inputs = _Inp
+      using __Inputs = _Inputs<T, InputSize, batch_size>;
+      using _
