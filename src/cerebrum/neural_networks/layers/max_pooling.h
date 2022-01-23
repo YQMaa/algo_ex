@@ -204,4 +204,5 @@ struct MaxPooling {
       using __Outputs = _Outputs<T, InputSize, batch_size>;
       using __Hidden = _Outputs<HiddenValue, InputSize, batch_size>;
 
-      using __InputMap = _InputMap
+      using __InputMap = _InputMap<T, InputSize>;
+      using __OutputMap 
