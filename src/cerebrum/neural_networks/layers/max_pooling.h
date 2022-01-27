@@ -208,4 +208,5 @@ struct MaxPooling {
       using __OutputMap = _OutputMap<T, InputSize>;
       using __HiddenMap = _OutputMap<HiddenValue, InputSize>;
 
-      __Inputs& _prev_errors = *reinter
+      __Inputs& _prev_errors = *reinterpret_cast<__Inputs*>(&prev_errors);
+     
