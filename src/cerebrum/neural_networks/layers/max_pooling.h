@@ -210,4 +210,6 @@ struct MaxPooling {
 
       __Inputs& _prev_errors = *reinterpret_cast<__Inputs*>(&prev_errors);
       const __Outputs& _errors = *reinterpret_cast<const __Outputs*>(&errors);
-      const __Hidden& _hidden = *reinterpret_cast<const __Hidden*>(&hidd
+      const __Hidden& _hidden = *reinterpret_cast<const __Hidden*>(&hidden);
+
+      for (size_
