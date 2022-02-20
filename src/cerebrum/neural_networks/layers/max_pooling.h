@@ -213,4 +213,4 @@ struct MaxPooling {
       const __Hidden& _hidden = *reinterpret_cast<const __Hidden*>(&hidden);
 
       for (size_t n = 0; n < batch_size; n++) {
-        std
+        std::fill(prev_errors[n].begin(), pre
