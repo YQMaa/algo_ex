@@ -217,4 +217,4 @@ struct MaxPooling {
 
         for (size_t m = 0; m < OutputSize<InputSize>::maps_no; m++) {
           __InputMap& prev_errors_map =
-            *reinterpret_
+            *reinterpret_cast<__InputMap*>(_prev_errors[n][m].data())
