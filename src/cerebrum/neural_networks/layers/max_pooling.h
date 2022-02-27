@@ -215,4 +215,5 @@ struct MaxPooling {
       for (size_t n = 0; n < batch_size; n++) {
         std::fill(prev_errors[n].begin(), prev_errors[n].end(), (T)0);
 
-        for (size_t
+        for (size_t m = 0; m < OutputSize<InputSize>::maps_no; m++) {
+  
