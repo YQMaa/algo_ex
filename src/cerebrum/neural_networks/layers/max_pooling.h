@@ -220,4 +220,5 @@ struct MaxPooling {
             *reinterpret_cast<__InputMap*>(_prev_errors[n][m].data());
           const __OutputMap& errors_map =
             *reinterpret_cast<const __OutputMap*>(_errors[n][m].data());
-          const __HiddenMa
+          const __HiddenMap& hidden_map =
+            *reinterpret
