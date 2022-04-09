@@ -226,4 +226,9 @@ struct MaxPooling {
           for (size_t r = 0; r < OutputSize<InputSize>::height; r++) {
             for (size_t c = 0; c < OutputSize<InputSize>::width; c++) {
               prev_errors_map[hidden_map[r][c].first][hidden_map[r][c].second]=
-                error
+                errors_map[r][c];
+            }
+          }
+        }
+      }
+ 
