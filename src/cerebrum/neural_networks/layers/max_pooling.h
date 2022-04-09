@@ -231,4 +231,8 @@ struct MaxPooling {
           }
         }
       }
- 
+    }
+  };
+};
+
+#endif
