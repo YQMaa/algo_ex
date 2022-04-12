@@ -5,4 +5,6 @@
 
 #include <cstddef>
 #include <iostream>
-#include
+#include <random>
+
+template<typename T, typename InputSiz
