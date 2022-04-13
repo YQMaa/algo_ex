@@ -7,4 +7,7 @@
 #include <iostream>
 #include <random>
 
-template<typename T, typename InputSiz
+template<typename T, typename InputSize, typename... Other>
+struct _Parameters;
+
+template<typen
