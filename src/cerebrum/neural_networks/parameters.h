@@ -10,4 +10,4 @@
 template<typename T, typename InputSize, typename... Other>
 struct _Parameters;
 
-template<typen
+template<typename T, typename InputSize, typename LastLa
