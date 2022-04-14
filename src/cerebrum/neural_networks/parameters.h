@@ -10,4 +10,5 @@
 template<typename T, typename InputSize, typename... Other>
 struct _Parameters;
 
-template<typename T, typename InputSize, typename LastLa
+template<typename T, typename InputSize, typename LastLayer>
+struct _Parameters<T, InputSize, LastLayer>
