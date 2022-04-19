@@ -12,4 +12,7 @@ struct _Parameters;
 
 template<typename T, typename InputSize, typename LastLayer>
 struct _Parameters<T, InputSize, LastLayer> {
-  typename LastLayer::template Para
+  typename LastLayer::template Parameters<T, InputSize> values;
+  bool next;
+
+  _Parameters() {
