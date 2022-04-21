@@ -16,3 +16,4 @@ struct _Parameters<T, InputSize, LastLayer> {
   bool next;
 
   _Parameters() {
+    LastLayer::template init_parameters<T, InputS
