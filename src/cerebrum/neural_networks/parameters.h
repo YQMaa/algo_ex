@@ -21,4 +21,9 @@ struct _Parameters<T, InputSize, LastLayer> {
 
   _Parameters(T value) {
     for (size_t i = 0;
-         i < LastLayer::template parameters_array_size<InputSize>()
+         i < LastLayer::template parameters_array_size<InputSize>();
+         i++)
+      values[i] = value;
+  }
+
+  _Paramet
