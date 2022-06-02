@@ -26,4 +26,5 @@ struct _Parameters<T, InputSize, LastLayer> {
       values[i] = value;
   }
 
-  _Paramet
+  _Parameters(T min, T max) {
+    std::random_device rd {
