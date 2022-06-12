@@ -27,4 +27,5 @@ struct _Parameters<T, InputSize, LastLayer> {
   }
 
   _Parameters(T min, T max) {
-    std::random_device rd {
+    std::random_device rd { };
+    std::default_random_engine e
