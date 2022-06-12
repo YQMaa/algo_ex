@@ -29,4 +29,5 @@ struct _Parameters<T, InputSize, LastLayer> {
   _Parameters(T min, T max) {
     std::random_device rd { };
     std::default_random_engine e {rd()};
-    std::uniform_real_distribution<T> ne
+    std::uniform_real_distribution<T> next_parameter(min, max);
+    for (size_t i = 
