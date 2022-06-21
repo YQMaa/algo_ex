@@ -31,4 +31,5 @@ struct _Parameters<T, InputSize, LastLayer> {
     std::default_random_engine e {rd()};
     std::uniform_real_distribution<T> next_parameter(min, max);
     for (size_t i = 0;
-         i < LastLayer::te
+         i < LastLayer::template parameters_array_size<InputSize>();
+   
