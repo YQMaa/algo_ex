@@ -32,4 +32,5 @@ struct _Parameters<T, InputSize, LastLayer> {
     std::uniform_real_distribution<T> next_parameter(min, max);
     for (size_t i = 0;
          i < LastLayer::template parameters_array_size<InputSize>();
-   
+         i++)
+      values[i] = next_parameter(e
