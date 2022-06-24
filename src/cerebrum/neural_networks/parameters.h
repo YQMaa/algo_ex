@@ -33,4 +33,8 @@ struct _Parameters<T, InputSize, LastLayer> {
     for (size_t i = 0;
          i < LastLayer::template parameters_array_size<InputSize>();
          i++)
-      values[i] = next_parameter(e
+      values[i] = next_parameter(e);
+  }
+
+  friend std::ostream&
+  operator<<(std::ostrea
