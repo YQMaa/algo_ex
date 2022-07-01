@@ -37,4 +37,10 @@ struct _Parameters<T, InputSize, LastLayer> {
   }
 
   friend std::ostream&
-  operator<<(std::ostream& s, const _Parameters<T, InputSize, L
+  operator<<(std::ostream& s, const _Parameters<T, InputSize, LastLayer>&){
+    s << std::endl;
+    return s;
+  }
+
+};
+
