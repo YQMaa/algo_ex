@@ -44,3 +44,4 @@ struct _Parameters<T, InputSize, LastLayer> {
 
 };
 
+template<typename T, typename InputSize, typenam
