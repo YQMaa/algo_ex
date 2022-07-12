@@ -46,4 +46,5 @@ struct _Parameters<T, InputSize, LastLayer> {
 
 template<typename T, typename InputSize, typename CrtLayer, typename... Other>
 struct _Parameters<T, InputSize, CrtLayer, Other...> {
-  using Ne
+  using NextParameters =
+    _Parameters<T, t
