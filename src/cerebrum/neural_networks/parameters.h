@@ -49,4 +49,4 @@ struct _Parameters<T, InputSize, CrtLayer, Other...> {
   using NextParameters =
     _Parameters<T, typename CrtLayer::template OutputSize<InputSize>,
                 Other...>;
-  using C
+  using CrtParameters = typename CrtLayer::temp
