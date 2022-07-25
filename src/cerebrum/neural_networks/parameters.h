@@ -54,4 +54,5 @@ struct _Parameters<T, InputSize, CrtLayer, Other...> {
   CrtParameters values;
   NextParameters next;
 
-  static constexpr size
+  static constexpr size_t parameters_array_size =
+    CrtLayer::
