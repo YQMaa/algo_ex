@@ -51,4 +51,7 @@ struct _Parameters<T, InputSize, CrtLayer, Other...> {
                 Other...>;
   using CrtParameters = typename CrtLayer::template Parameters<T, InputSize>;
  
-  CrtParameters va
+  CrtParameters values;
+  NextParameters next;
+
+  static constexpr size
