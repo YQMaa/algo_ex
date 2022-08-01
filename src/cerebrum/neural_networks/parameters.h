@@ -57,4 +57,4 @@ struct _Parameters<T, InputSize, CrtLayer, Other...> {
   static constexpr size_t parameters_array_size =
     CrtLayer::template parameters_array_size<InputSize>();
   static constexpr size_t parameters_no =
-   
+    CrtLayer::template parameters_no<Inp
