@@ -60,4 +60,4 @@ struct _Parameters<T, InputSize, CrtLayer, Other...> {
     CrtLayer::template parameters_no<InputSize>();
 
   /* Tudor:
-   * Constructors
+   * Constructors: default / default value / uniform from interval [min
