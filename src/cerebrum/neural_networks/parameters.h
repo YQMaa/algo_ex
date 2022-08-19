@@ -64,4 +64,7 @@ struct _Parameters<T, InputSize, CrtLayer, Other...> {
    */
 
   _Parameters() {
-    CrtLayer::template init_parameters<T, InputSize>(v
+    CrtLayer::template init_parameters<T, InputSize>(values);
+  }
+
+  _Parameters(T value) : next {value} {
