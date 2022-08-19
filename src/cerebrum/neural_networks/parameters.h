@@ -68,3 +68,5 @@ struct _Parameters<T, InputSize, CrtLayer, Other...> {
   }
 
   _Parameters(T value) : next {value} {
+    for (size_t i = 0;
+         i < CrtL
