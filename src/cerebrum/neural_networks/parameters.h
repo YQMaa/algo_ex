@@ -64,4 +64,4 @@ struct _Parameters<T, InputSize, CrtLayer, Other...> {
    */
 
   _Parameters() {
-    CrtLaye
+    CrtLayer::template init_parameters<T, InputSize>(v
