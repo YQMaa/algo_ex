@@ -71,4 +71,7 @@ struct _Parameters<T, InputSize, CrtLayer, Other...> {
     for (size_t i = 0;
          i < CrtLayer::template parameters_array_size<InputSize>();
          i++)
-      values[i] = va
+      values[i] = value;
+  }
+
+  _Parameters(T min, T max) : next
