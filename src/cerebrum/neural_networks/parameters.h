@@ -74,4 +74,5 @@ struct _Parameters<T, InputSize, CrtLayer, Other...> {
       values[i] = value;
   }
 
-  _Parameters(T min, T max) : next
+  _Parameters(T min, T max) : next {min, max} {
+    std::random_de
