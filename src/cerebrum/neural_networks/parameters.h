@@ -75,4 +75,5 @@ struct _Parameters<T, InputSize, CrtLayer, Other...> {
   }
 
   _Parameters(T min, T max) : next {min, max} {
-    std::random_de
+    std::random_device rd { };
+    std::default_random_engine e {rd()}
