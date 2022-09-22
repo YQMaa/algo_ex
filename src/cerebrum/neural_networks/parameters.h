@@ -81,4 +81,7 @@ struct _Parameters<T, InputSize, CrtLayer, Other...> {
     for (size_t i = 0;
          i < CrtLayer::template parameters_array_size<InputSize>();
          i++)
-      values[
+      values[i] = next_parameter(e);
+  }
+
+  friend std::ostream
