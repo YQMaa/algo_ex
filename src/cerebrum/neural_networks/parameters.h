@@ -84,4 +84,6 @@ struct _Parameters<T, InputSize, CrtLayer, Other...> {
       values[i] = next_parameter(e);
   }
 
-  friend std::ostream
+  friend std::ostream&
+  operator<<(std::ostream& s,
+         
