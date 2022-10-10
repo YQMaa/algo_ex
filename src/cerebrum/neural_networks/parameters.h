@@ -87,4 +87,5 @@ struct _Parameters<T, InputSize, CrtLayer, Other...> {
   friend std::ostream&
   operator<<(std::ostream& s,
              const _Parameters<T, InputSize, CrtLayer, Other...>& p) {
-    for (size_t i = 0; i < p
+    for (size_t i = 0; i < p.parameters_no; i++) {
+      s << p.values[i
