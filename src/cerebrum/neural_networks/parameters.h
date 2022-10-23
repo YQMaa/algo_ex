@@ -90,4 +90,6 @@ struct _Parameters<T, InputSize, CrtLayer, Other...> {
     for (size_t i = 0; i < p.parameters_no; i++) {
       s << p.values[i] << " ";
     }
-    s << std::endl << 
+    s << std::endl << "-----" << std::endl << p.next;
+    return s;
+ 
