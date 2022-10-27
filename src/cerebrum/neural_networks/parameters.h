@@ -92,4 +92,7 @@ struct _Parameters<T, InputSize, CrtLayer, Other...> {
     }
     s << std::endl << "-----" << std::endl << p.next;
     return s;
- 
+  }
+};
+
+#endif
