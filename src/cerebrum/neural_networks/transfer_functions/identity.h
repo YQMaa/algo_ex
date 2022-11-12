@@ -4,4 +4,8 @@
 #define IDENTITY_H
 
 #include <cstring>
-#include <cm
+#include <cmath>
+#include <array>
+
+template<typename T>
+struct
