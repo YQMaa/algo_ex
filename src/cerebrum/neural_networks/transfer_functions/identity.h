@@ -14,4 +14,8 @@ struct Identity {
   }
 
   inline static T df(T) {
-    ret
+    return (T)1;
+  }
+
+  /* All neurons on a layer */
+  te
