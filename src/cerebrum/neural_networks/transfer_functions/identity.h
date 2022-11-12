@@ -10,3 +10,8 @@
 template<typename T>
 struct Identity {
   inline static T f(T x) {
+    return x;
+  }
+
+  inline static T df(T) {
+    ret
