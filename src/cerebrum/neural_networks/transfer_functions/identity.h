@@ -8,4 +8,5 @@
 #include <array>
 
 template<typename T>
-struct
+struct Identity {
+  inline static T f(T x) {
