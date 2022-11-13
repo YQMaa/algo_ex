@@ -18,4 +18,5 @@ struct Identity {
   }
 
   /* All neurons on a layer */
-  te
+  template<typename LayerSize>
+  using Neurons = std
