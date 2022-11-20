@@ -23,4 +23,5 @@ struct Identity {
 
   template<typename LayerSize>
   inline static void
-  f_layer(const N
+  f_layer(const Neurons<LayerSize>& Z, Neurons<LayerSize>& A) {
+   
