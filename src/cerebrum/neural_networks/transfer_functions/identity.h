@@ -21,4 +21,6 @@ struct Identity {
   template<typename LayerSize>
   using Neurons = std::array<T, LayerSize::length>;
 
-  template<typename 
+  template<typename LayerSize>
+  inline static void
+  f_layer(const N
