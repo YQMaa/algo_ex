@@ -24,4 +24,4 @@ struct Identity {
   template<typename LayerSize>
   inline static void
   f_layer(const Neurons<LayerSize>& Z, Neurons<LayerSize>& A) {
-   
+    std::memcpy(A.data(), Z.data(), si
