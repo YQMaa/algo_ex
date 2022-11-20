@@ -19,4 +19,6 @@ struct Identity {
 
   /* All neurons on a layer */
   template<typename LayerSize>
-  using Neurons = std
+  using Neurons = std::array<T, LayerSize::length>;
+
+  template<typename 
