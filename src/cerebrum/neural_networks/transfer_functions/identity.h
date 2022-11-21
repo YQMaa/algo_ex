@@ -29,4 +29,4 @@ struct Identity {
 
   template<typename LayerSize>
   inline static void
-  df_layer(const Neu
+  df_layer(const Neurons<LayerSize>& , Neurons<LayerSize>& ) {
