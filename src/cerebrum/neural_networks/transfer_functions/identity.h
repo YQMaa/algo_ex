@@ -27,4 +27,6 @@ struct Identity {
     std::memcpy(A.data(), Z.data(), sizeof(Z));
   }
 
-  template<typename LayerSi
+  template<typename LayerSize>
+  inline static void
+  df_layer(const Neu
