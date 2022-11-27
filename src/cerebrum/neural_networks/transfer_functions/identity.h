@@ -29,4 +29,6 @@ struct Identity {
 
   template<typename LayerSize>
   inline static void
-  df_layer(const Neurons<LayerSize>& , Neurons<LayerSize>& ) {
+  df_layer(const Neurons<LayerSize>& , Neurons<LayerSize>& ) {}
+
+  /* All neurons in a batch */
