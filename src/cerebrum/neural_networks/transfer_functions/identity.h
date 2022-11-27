@@ -32,4 +32,5 @@ struct Identity {
   df_layer(const Neurons<LayerSize>& , Neurons<LayerSize>& ) {}
 
   /* All neurons in a batch */
-  template<typename LayerSize, size_t 
+  template<typename LayerSize, size_t batch_size>
+  using Batch = std::arra
