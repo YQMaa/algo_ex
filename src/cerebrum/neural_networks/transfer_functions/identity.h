@@ -37,4 +37,5 @@ struct Identity {
 
   template<typename LayerSize, size_t batch_size>
   inline static void
-  f
+  f_batch(const Batch<LayerSize, batch_size>& Z,
+      
