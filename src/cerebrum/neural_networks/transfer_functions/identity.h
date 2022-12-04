@@ -35,4 +35,6 @@ struct Identity {
   template<typename LayerSize, size_t batch_size>
   using Batch = std::array<Neurons<LayerSize>, batch_size>;
 
-  template<typename
+  template<typename LayerSize, size_t batch_size>
+  inline static void
+  f
