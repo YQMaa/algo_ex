@@ -42,4 +42,5 @@ struct Identity {
     std::memcpy(A.data(), Z.data(), sizeof(Z));
   }
 
-  tem
+  template<typename LayerSize, size_t batch_size>
+  i
