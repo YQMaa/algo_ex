@@ -39,4 +39,7 @@ struct Identity {
   inline static void
   f_batch(const Batch<LayerSize, batch_size>& Z,
           Batch<LayerSize, batch_size>& A) {
-    std:
+    std::memcpy(A.data(), Z.data(), sizeof(Z));
+  }
+
+  tem
