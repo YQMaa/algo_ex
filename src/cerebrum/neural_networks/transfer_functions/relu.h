@@ -63,3 +63,10 @@ struct ReLU {
 
     const LinearBatch& a = *reinterpret_cast<const LinearBatch*>(A.data());
     LinearBatch& err = *reinterpret_cast<LinearBatch*>(Err.data());
+
+    for (size_t j = 0; j < full_length; j++)
+      err[j] *= df(a[j]);
+  }
+};
+
+#endif
