@@ -7,4 +7,7 @@
 #include <array>
 
 template<typename T>
-struct Hype
+struct HyperbolicTangent;
+
+template<typename T>
+struct
