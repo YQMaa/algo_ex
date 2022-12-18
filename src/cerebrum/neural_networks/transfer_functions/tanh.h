@@ -1,4 +1,7 @@
 // Copyright (C) 2015 Tudor Berariu <tudor.berariu@gmail.com>
 
 #ifndef HYPERBOLIC_TANGENT_H
-#defi
+#define HYPERBOLIC_TANGENT_H
+
+#include <cmath>
+#i
