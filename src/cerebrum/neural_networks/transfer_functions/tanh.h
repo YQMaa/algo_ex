@@ -10,4 +10,6 @@ template<typename T>
 struct HyperbolicTangent;
 
 template<typename T>
-struct
+struct HyperbolicTangent {
+  inline static T f(T x) {
+    const T 
