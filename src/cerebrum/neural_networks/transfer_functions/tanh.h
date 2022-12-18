@@ -4,4 +4,7 @@
 #define HYPERBOLIC_TANGENT_H
 
 #include <cmath>
-#i
+#include <array>
+
+template<typename T>
+struct Hype
