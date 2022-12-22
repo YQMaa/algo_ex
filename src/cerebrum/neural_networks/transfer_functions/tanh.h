@@ -12,4 +12,5 @@ struct HyperbolicTangent;
 template<typename T>
 struct HyperbolicTangent {
   inline static T f(T x) {
-    const T 
+    const T e2x = exp(-2 * x);
+    return ((T)1 - e2x) / ((T)1 +
