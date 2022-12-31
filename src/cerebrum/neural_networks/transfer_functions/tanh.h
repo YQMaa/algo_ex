@@ -20,4 +20,5 @@ struct HyperbolicTangent {
     return (T)1 - y * y;
   }
 
-  /* All neuro
+  /* All neurons on a layer */
+  template<typename Laye
