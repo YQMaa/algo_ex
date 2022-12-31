@@ -16,4 +16,8 @@ struct HyperbolicTangent {
     return ((T)1 - e2x) / ((T)1 + e2x);
   }
 
-  inline static T df
+  inline static T df(T y) {
+    return (T)1 - y * y;
+  }
+
+  /* All neuro
