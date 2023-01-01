@@ -22,4 +22,7 @@ struct HyperbolicTangent {
 
   /* All neurons on a layer */
   template<typename LayerSize>
-  using Neurons = std::array<T, L
+  using Neurons = std::array<T, LayerSize::length>;
+
+  template<typename LayerSize>
+  in
