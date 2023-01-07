@@ -25,4 +25,5 @@ struct HyperbolicTangent {
   using Neurons = std::array<T, LayerSize::length>;
 
   template<typename LayerSize>
-  in
+  inline static void
+  f_layer(const Neurons<LayerSize>
