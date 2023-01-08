@@ -27,4 +27,5 @@ struct HyperbolicTangent {
   template<typename LayerSize>
   inline static void
   f_layer(const Neurons<LayerSize>& Z, Neurons<LayerSize>& A) {
-    for (size_t j = 0;
+    for (size_t j = 0; j < LayerSize::length; j++) {
+      A[j] = f(Z[j
