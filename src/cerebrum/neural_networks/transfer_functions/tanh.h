@@ -32,4 +32,6 @@ struct HyperbolicTangent {
     }
   }
 
-  template<type
+  template<typename LayerSize>
+  inline static void
+  df_layer(const N
