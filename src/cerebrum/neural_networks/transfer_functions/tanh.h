@@ -36,4 +36,8 @@ struct HyperbolicTangent {
   inline static void
   df_layer(const Neurons<LayerSize>& A, Neurons<LayerSize>& Err){
     for (size_t j = 0; j < LayerSize::length; j++) {
-      Err[j] *= ((T)1 - A
+      Err[j] *= ((T)1 - A[j] * A[j]);
+    }
+  }
+
+  /* All 
