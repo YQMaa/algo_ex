@@ -41,4 +41,5 @@ struct HyperbolicTangent {
   }
 
   /* All neurons in a batch */
-  template<typename Laye
+  template<typename LayerSize, size_t batch_size>
+  using Bat
