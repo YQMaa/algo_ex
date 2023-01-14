@@ -40,4 +40,5 @@ struct HyperbolicTangent {
     }
   }
 
-  /* All 
+  /* All neurons in a batch */
+  template<typename Laye
