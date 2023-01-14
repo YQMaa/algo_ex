@@ -34,4 +34,5 @@ struct HyperbolicTangent {
 
   template<typename LayerSize>
   inline static void
-  df_layer(const Neurons<LayerSize>& A, Neurons<LayerSi
+  df_layer(const Neurons<LayerSize>& A, Neurons<LayerSize>& Err){
+    for (size_t j = 0; j < LayerSize::l
