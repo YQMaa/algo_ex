@@ -42,4 +42,6 @@ struct HyperbolicTangent {
 
   /* All neurons in a batch */
   template<typename LayerSize, size_t batch_size>
-  using Batch = std::array<Neurons<LayerSize>, ba
+  using Batch = std::array<Neurons<LayerSize>, batch_size>;
+
+  template<typename LayerSize, size_t bat
