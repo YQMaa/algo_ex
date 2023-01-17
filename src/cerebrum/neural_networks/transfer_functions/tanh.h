@@ -47,4 +47,5 @@ struct HyperbolicTangent {
   template<typename LayerSize, size_t batch_size>
   inline static void
   f_batch(const Batch<LayerSize, batch_size>& Z,
-          Batch<LayerSize, batch_
+          Batch<LayerSize, batch_size>& A) {
+    constexpr size_t full_length 
