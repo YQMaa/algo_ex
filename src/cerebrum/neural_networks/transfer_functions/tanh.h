@@ -48,4 +48,5 @@ struct HyperbolicTangent {
   inline static void
   f_batch(const Batch<LayerSize, batch_size>& Z,
           Batch<LayerSize, batch_size>& A) {
-    constexpr size_t full_length 
+    constexpr size_t full_length = LayerSize::length * batch_size;
+    using Linea
