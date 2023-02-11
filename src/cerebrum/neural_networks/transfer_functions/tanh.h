@@ -58,4 +58,6 @@ struct HyperbolicTangent {
       a[j] = f(z[j]);
   }
 
-  template<typename LayerSize, size_t batch
+  template<typename LayerSize, size_t batch_size>
+  inline static void
+  df_batc
