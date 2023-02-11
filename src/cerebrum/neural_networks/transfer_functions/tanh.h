@@ -54,4 +54,6 @@ struct HyperbolicTangent {
     const LinearBatch& z = *reinterpret_cast<const LinearBatch*>(Z.data());
     LinearBatch& a = *reinterpret_cast<LinearBatch*>(A.data());
 
-    for (si
+    for (size_t j = 0; j < full_length; j++)
+      a[j] = f(z[j]);
+ 
