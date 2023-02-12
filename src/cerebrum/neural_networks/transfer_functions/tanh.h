@@ -60,4 +60,5 @@ struct HyperbolicTangent {
 
   template<typename LayerSize, size_t batch_size>
   inline static void
-  df_batch(const Batch<LayerSize, batch_size>& 
+  df_batch(const Batch<LayerSize, batch_size>& A,
+           Batch<LayerSize, batch_size>& Er
