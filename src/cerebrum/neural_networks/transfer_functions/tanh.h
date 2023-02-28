@@ -63,4 +63,4 @@ struct HyperbolicTangent {
   df_batch(const Batch<LayerSize, batch_size>& A,
            Batch<LayerSize, batch_size>& Err) {
     constexpr size_t full_length = LayerSize::length * batch_size;
-    using LinearBatch 
+    using LinearBatch = std::array<T, LayerSize::length * batch_siz
