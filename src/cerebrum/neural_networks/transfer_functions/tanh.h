@@ -66,4 +66,6 @@ struct HyperbolicTangent {
     using LinearBatch = std::array<T, LayerSize::length * batch_size>;
 
     const LinearBatch& a = *reinterpret_cast<const LinearBatch*>(A.data());
-    LinearBatch& err 
+    LinearBatch& err = *reinterpret_cast<LinearBatch*>(Err.data());
+
+    for 
