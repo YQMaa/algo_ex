@@ -65,4 +65,5 @@ struct HyperbolicTangent {
     constexpr size_t full_length = LayerSize::length * batch_size;
     using LinearBatch = std::array<T, LayerSize::length * batch_size>;
 
-    const LinearBatch& a = *reinterpret_cast<co
+    const LinearBatch& a = *reinterpret_cast<const LinearBatch*>(A.data());
+    LinearBatch& err 
