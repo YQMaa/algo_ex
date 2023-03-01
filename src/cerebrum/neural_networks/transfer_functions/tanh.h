@@ -68,4 +68,5 @@ struct HyperbolicTangent {
     const LinearBatch& a = *reinterpret_cast<const LinearBatch*>(A.data());
     LinearBatch& err = *reinterpret_cast<LinearBatch*>(Err.data());
 
-    for 
+    for (size_t j = 0; j < full_length; j++)
+      e
