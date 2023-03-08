@@ -3,4 +3,6 @@
 #ifndef NEURAL_NETWORKS
 #define NEURAL_NETWORKS
 
-#include "cerebrum/inclu
+#include "cerebrum/include_cblas.h"
+
+#include "cerebrum/neural_networks/fee
