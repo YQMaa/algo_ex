@@ -5,4 +5,6 @@
 
 #include "cerebrum/include_cblas.h"
 
-#include "cerebrum/neural_networks/fee
+#include "cerebrum/neural_networks/feed_forward_net.h"
+
+#include "cerebrum/neural_networks/lay
