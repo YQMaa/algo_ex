@@ -9,4 +9,4 @@
 
 #include "cerebrum/neural_networks/layers/fully_connected.h"
 #include "cerebrum/neural_networks/layers/dropout.h"
-#include "ce
+#include "cerebrum/neural_networks/layers/max_poolin
