@@ -8,4 +8,5 @@
 #include "cerebrum/neural_networks/feed_forward_net.h"
 
 #include "cerebrum/neural_networks/layers/fully_connected.h"
-#include "cerebrum/neura
+#include "cerebrum/neural_networks/layers/dropout.h"
+#include "ce
