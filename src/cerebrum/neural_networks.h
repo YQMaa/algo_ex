@@ -11,4 +11,5 @@
 #include "cerebrum/neural_networks/layers/dropout.h"
 #include "cerebrum/neural_networks/layers/max_pooling.h"
 
-#include "cerebrum/neural_
+#include "cerebrum/neural_networks/transfer_functions/logistic.h"
+#include "cerebrum
