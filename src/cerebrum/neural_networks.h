@@ -12,4 +12,4 @@
 #include "cerebrum/neural_networks/layers/max_pooling.h"
 
 #include "cerebrum/neural_networks/transfer_functions/logistic.h"
-#include "cerebrum
+#include "cerebrum/neural_networks/transfer_functions/tanh.h"
