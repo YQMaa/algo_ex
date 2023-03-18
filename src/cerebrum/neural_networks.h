@@ -13,4 +13,5 @@
 
 #include "cerebrum/neural_networks/transfer_functions/logistic.h"
 #include "cerebrum/neural_networks/transfer_functions/tanh.h"
-#include "cerebrum/neural_networks/transfer_funct
+#include "cerebrum/neural_networks/transfer_functions/relu.h"
+#include "cerebrum/neural_
