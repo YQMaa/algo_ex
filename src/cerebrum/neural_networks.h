@@ -16,3 +16,4 @@
 #include "cerebrum/neural_networks/transfer_functions/relu.h"
 #include "cerebrum/neural_networks/transfer_functions/identity.h"
 
+#include "cerebrum/neural_networks/error_fu
