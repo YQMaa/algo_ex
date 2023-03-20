@@ -17,4 +17,4 @@
 #include "cerebrum/neural_networks/transfer_functions/identity.h"
 
 #include "cerebrum/neural_networks/error_functions/rmse.h"
-#include "cerebrum/neural_network
+#include "cerebrum/neural_networks/error_functions/sum_of_squares.
