@@ -18,4 +18,7 @@
 
 #include "cerebrum/neural_networks/error_functions/rmse.h"
 #include "cerebrum/neural_networks/error_functions/sum_of_squares.h"
-#include "cerebrum/neural_networks/er
+#include "cerebrum/neural_networks/error_functions/softmax.h"
+
+#endif
+
