@@ -71,3 +71,17 @@ void test_performance() {
   std::cout << "avg forward in " << fw_avg / 10.0 << " \t and "
             << "avg backprop in " << bw_avg / 10.0 << std::endl;
 }
+
+int main() {
+  //feenableexcept(FE_INVALID | FE_OVERFLOW);
+  using NN = FeedForwardNet<double,
+                            Size<10>,
+                            FullyConnected<1000, Logistic>,
+                            MaxPooling<1, 1>,
+                            FullyConnected<1000, ReLU>,
+                            Dropout<500>,
+                            FullyConnected<2000, HyperbolicTangent>,
+                            FullyConnected<100, Identity>>;
+  test_performance<300, NN>();
+  return 0;
+}
